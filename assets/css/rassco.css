@@ -1390,7 +1390,7 @@ body.sector-theme--investment {
 
 .sector-hero {
   position:relative;
-  min-height:min(320px, 42vw);
+  min-height:min(340px, 46vw);
   display:flex;
   align-items:flex-end;
   padding:48px clamp(20px, 4vw, 48px);
@@ -1413,24 +1413,6 @@ body.sector-theme--investment {
   margin:0 auto;
   width:100%}
 
-.sector-page-brand {
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin:0 0 40px;
-  padding:clamp(22px, 4vw, 36px) clamp(20px, 4vw, 40px);
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:12px;
-  box-shadow:0 6px 28px rgba(26,35,50,.07)}
-
-.sector-page-brand-logo {
-  display:block;
-  height:clamp(72px, 16vw, 118px);
-  width:auto;
-  max-width:min(420px, 100%);
-  object-fit:contain}
-
 .sector-hero-kicker {
   font-size:10px;
   font-weight:700;
@@ -1439,13 +1421,27 @@ body.sector-theme--investment {
   color:var(--sector-accent, var(--teal));
   margin-bottom:10px}
 
-.sector-hero h1 {
-  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
-  font-size:clamp(28px, 5vw, 40px);
-  font-weight:900;
-  color:#fff;
-  line-height:1.15;
-  margin:0 0 12px}
+.sector-hero-title {
+  margin:0 0 14px;
+  line-height:0;
+  font-size:0;
+  font-weight:400}
+
+.sector-hero-title-logo-wrap {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(8px, 1.5vw, 14px) clamp(12px, 2.2vw, 20px);
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 10px 36px rgba(0,0,0,.22)}
+
+.sector-hero-title-logo {
+  display:block;
+  height:clamp(48px, 11vw, 96px);
+  width:auto;
+  max-width:min(400px, 92vw);
+  object-fit:contain}
 
 .sector-hero-lead {
   font-size:15px;
