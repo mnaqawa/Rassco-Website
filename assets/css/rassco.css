@@ -8,7 +8,7 @@ html {
   scroll-behavior:smooth}
 
 body {
-  font-family:'Montserrat','Segoe UI',sans-serif;
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',Tahoma,sans-serif;
   background:#fff;
   color:#111;
   line-height:1.6;
@@ -119,9 +119,11 @@ a {
   justify-content:center;
   flex-shrink:0}
 
-.nav-logo-icon svg {
+.nav-logo-img {
   width:46px;
-  height:46px}
+  height:46px;
+  display:block;
+  flex-shrink:0}
 
 .nav-logo-text {
   display:flex;
@@ -167,6 +169,22 @@ a {
   font-size:12px;
   font-weight:600;
   color:var(--mid)}
+
+.nav-btn {
+  padding:9px 22px;
+  border-radius:3px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  background:var(--teal);
+  color:#fff;
+  transition:background .2s;
+  white-space:nowrap}
+
+.nav-btn:hover {
+  background:var(--teal-d);
+  color:#fff}
 
 .hero {
   display:grid;
@@ -219,6 +237,7 @@ a {
   border-radius:2px}
 
 .hero-main-content h1 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:52px;
   font-weight:900;
   line-height:1.08;
@@ -235,8 +254,27 @@ a {
 
 .hero-cta-row {
   display:flex;
+  flex-wrap:wrap;
   align-items:center;
   gap:20px}
+
+.hero-cta {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--teal);
+  color:#fff;
+  padding:13px 28px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  border-radius:3px;
+  transition:background .2s}
+
+.hero-cta:hover {
+  background:var(--teal-d);
+  color:#fff}
 
 .hero-cta-ghost {
   font-size:11px;
@@ -367,6 +405,7 @@ a {
   background:var(--teal)}
 
 .wwa-left h2 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:44px;
   font-weight:900;
   line-height:1.15;
@@ -383,6 +422,9 @@ a {
   color:#555;
   line-height:1.85;
   margin-bottom:16px}
+
+.wwa-left > p:last-of-type {
+  margin-bottom:0}
 
 .wwa-right {
   padding:80px 48px 80px 64px;
@@ -427,6 +469,7 @@ a {
   border-bottom:1px solid var(--border)}
 
 .divisions-header-left h2 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:40px;
   font-weight:900;
   line-height:1.15;
@@ -551,7 +594,7 @@ a {
   transition:max-height .4s ease}
 
 .div-card:hover .div-brands {
-  max-height:60px}
+  max-height:88px}
 
 .div-brand-tag {
   font-size:9px;
@@ -574,6 +617,7 @@ a {
   justify-content:space-between}
 
 .portfolio-header h2 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:40px;
   font-weight:900;
   color:#fff;
@@ -618,7 +662,7 @@ a {
   transform:scale(1.04)}
 
 .p-text {
-  padding:52px;
+  padding:52px 52px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -636,6 +680,7 @@ a {
   margin-bottom:-12px}
 
 .p-text h3 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:28px;
   font-weight:800;
   color:#fff;
@@ -697,6 +742,7 @@ a {
   margin-bottom:56px}
 
 .clients-header h2 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:36px;
   font-weight:900;
   margin-bottom:10px}
@@ -743,6 +789,7 @@ a {
   padding:64px 48px}
 
 .cta-banner h2 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:38px;
   font-weight:900;
   color:#fff;
@@ -773,7 +820,11 @@ a {
   border-radius:3px;
   white-space:nowrap;
   transition:transform .2s;
-  cursor:pointer}
+  cursor:pointer;
+  text-decoration:none}
+
+a.cta-banner-btn:hover {
+  color:var(--teal)}
 
 .cta-banner-btn:hover {
   transform:translateY(-2px)}
@@ -917,6 +968,10 @@ a.nav-left {
   gap:12px;
   margin-bottom:16px}
 
+.footer-logo-img {
+  display:block;
+  flex-shrink:0}
+
 .footer-logo-wordmark-title {
   font-size:20px;
   font-weight:900;
@@ -996,6 +1051,11 @@ a.cta-banner-btn {
   .nav-right {
     padding-top:12px;
     justify-content:flex-start}
+
+  .nav-panel .nav-btn {
+    width:100%;
+    justify-content:center;
+    text-align:center}
 
   .hero {
     grid-template-columns:1fr;
