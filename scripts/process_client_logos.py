@@ -3,8 +3,23 @@
 Process client logo PNGs: knock out near-white backgrounds, trim, normalize
 height, add transparent padding, save optimized PNG + WebP.
 
-Run from repo root: python scripts/process_client_logos.py
-Requires: pip install pillow numpy
+Ubuntu / Debian (from site root, e.g. /var/www/rassco):
+
+  sudo apt update
+  sudo apt install -y python3 python3-pip
+  python3 -m pip install --user -r scripts/requirements-tools.txt
+  python3 scripts/process_client_logos.py
+
+Or one step:  bash scripts/run-process-logos.sh
+
+Note: use python3 / pip — the command "python" is often not installed.
+The requirements file is NOT executable; do not run it as a shell command.
+
+If pip errors with "externally-managed-environment", use a venv:
+
+  python3 -m venv .venv-logo && . .venv-logo/bin/activate
+  pip install -r scripts/requirements-tools.txt
+  python scripts/process_client_logos.py
 """
 from __future__ import annotations
 

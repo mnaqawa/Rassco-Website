@@ -1,3 +1,7 @@
-# Optional: run python scripts/process_client_logos.py
+# Install (from repo root):
+#   python3 -m pip install --user -r scripts/requirements-tools.txt
+# Run:
+#   python3 scripts/process_client_logos.py
+#   (or: bash scripts/run-process-logos.sh)
 pillow>=10.0.0
 numpy>=1.24.0
