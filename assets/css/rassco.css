@@ -46,8 +46,8 @@ a {
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding:12px clamp(16px, 4vw, 48px);
-  min-height:88px;
+  padding:10px clamp(16px, 4vw, 48px);
+  min-height:68px;
   max-width:100%}
 
 .nav-panel {
@@ -114,9 +114,9 @@ a {
 
 .nav-logo-full {
   display:block;
-  height:clamp(44px, 10vw, 72px);
+  height:clamp(32px, 7vw, 52px);
   width:auto;
-  max-width:min(380px, calc(100vw - 132px));
+  max-width:min(280px, calc(100vw - 132px));
   object-fit:contain}
 
 .nav-links {
@@ -1033,9 +1033,9 @@ a.nav-left {
 
 .footer-logo-mark-img {
   display:block;
-  height:clamp(48px, 9vw, 80px);
+  height:clamp(36px, 6.5vw, 58px);
   width:auto;
-  max-width:min(400px, 94vw);
+  max-width:min(300px, 94vw);
   object-fit:contain;
   flex-shrink:0}
 
