@@ -46,8 +46,8 @@ a {
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  padding:0 clamp(16px, 4vw, 48px);
-  height:64px;
+  padding:10px clamp(16px, 4vw, 48px);
+  min-height:76px;
   max-width:100%}
 
 .nav-panel {
@@ -114,9 +114,9 @@ a {
 
 .nav-logo-full {
   display:block;
-  height:42px;
+  height:clamp(48px, 6.5vw, 64px);
   width:auto;
-  max-width:min(200px, 42vw);
+  max-width:min(340px, 78vw);
   object-fit:contain}
 
 .nav-links {
@@ -681,34 +681,22 @@ a {
   font-size:14px;
   color:var(--mid)}
 
-.clients-grid {
-  display:grid;
-  grid-template-columns:repeat(8,1fr);
-  gap:2px;
-  background:var(--border)}
+.clients-showcase {
+  max-width:1120px;
+  margin:0 auto}
 
-.client-tile {
-  background:#fff;
-  padding:28px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition:background .2s}
+.clients-showcase-figure {
+  margin:0;
+  padding:0;
+  background:var(--border);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 8px 32px rgba(26,35,50,.06)}
 
-.client-tile:hover {
-  background:var(--teal-l)}
-
-.client-name {
-  font-size:12px;
-  font-weight:800;
-  color:#aaa;
-  letter-spacing:.5px;
-  text-align:center;
-  text-transform:uppercase;
-  transition:color .2s}
-
-.client-tile:hover .client-name {
-  color:var(--teal)}
+.clients-showcase-img {
+  display:block;
+  width:100%;
+  height:auto}
 
 .cta-banner {
   background:var(--teal);
@@ -900,9 +888,9 @@ a.nav-left {
 
 .footer-logo-mark-img {
   display:block;
-  height:48px;
+  height:clamp(52px, 8vw, 68px);
   width:auto;
-  max-width:min(240px, 70vw);
+  max-width:min(300px, 85vw);
   object-fit:contain;
   flex-shrink:0}
 
@@ -1046,9 +1034,6 @@ a.cta-banner-btn {
 @media (max-width:1200px) {
   .divisions-grid {
     grid-template-columns:1fr 1fr}
-
-  .clients-grid {
-    grid-template-columns:repeat(4,1fr)}
 }
 
 @media (max-width:768px) {
@@ -1075,9 +1060,6 @@ a.cta-banner-btn {
 
   .clients-section {
     padding:56px clamp(16px, 4vw, 48px)}
-
-  .clients-grid {
-    grid-template-columns:repeat(2,1fr)}
 
   .footer-top {
     grid-template-columns:1fr}
