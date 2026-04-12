@@ -663,13 +663,22 @@ a {
   color:#00e5e5}
 
 .clients-section {
+  position:relative;
   padding:80px 48px;
   border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border)}
+  border-bottom:1px solid var(--border);
+  background-color:#eef1f4;
+  background-image:
+    linear-gradient(90deg, rgba(0,140,160,.045) 1px, transparent 1px),
+    linear-gradient(rgba(0,140,160,.045) 1px, transparent 1px);
+  background-size:56px 56px;
+  background-position:center top}
 
 .clients-header {
+  position:relative;
+  z-index:1;
   text-align:center;
-  margin-bottom:56px}
+  margin-bottom:48px}
 
 .clients-header h2 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
@@ -682,21 +691,157 @@ a {
   color:var(--mid)}
 
 .clients-showcase {
-  max-width:1120px;
+  position:relative;
+  z-index:1;
+  max-width:1040px;
+  margin:0 auto;
+  padding:0 clamp(8px, 2vw, 0) 48px}
+
+.clients-slider {
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:clamp(8px, 2vw, 16px)}
+
+.clients-slider-viewport {
+  flex:1;
+  min-width:0;
+  overflow:hidden;
+  border-radius:4px}
+
+.clients-slider-track {
+  display:flex;
+  width:100%;
+  transition:transform .5s cubic-bezier(.25, .1, .25, 1);
+  will-change:transform}
+
+.clients-slider-slide {
+  flex:0 0 100%;
+  min-width:0;
+  box-sizing:border-box;
+  padding:8px 0 4px}
+
+.clients-slide-inner {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:clamp(12px, 2.5vw, 20px);
+  max-width:920px;
   margin:0 auto}
 
-.clients-showcase-figure {
-  margin:0;
-  padding:0;
-  background:var(--border);
-  border-radius:6px;
-  overflow:hidden;
-  box-shadow:0 8px 32px rgba(26,35,50,.06)}
+.clients-slide-inner--few {
+  max-width:520px}
 
-.clients-showcase-img {
+.clients-logo-card {
+  flex:1 1 160px;
+  max-width:220px;
+  min-height:112px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 18px;
+  background:#fff;
+  border:1px solid #dcdfe3;
+  border-radius:2px;
+  box-shadow:0 1px 0 rgba(26,35,50,.04)}
+
+.clients-logo-card img {
   display:block;
-  width:100%;
-  height:auto}
+  max-width:100%;
+  width:auto;
+  height:auto;
+  max-height:64px;
+  object-fit:contain}
+
+.clients-slider-nav {
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  padding:0;
+  border:1px solid #dcdfe3;
+  border-radius:50%;
+  background:#fff;
+  color:var(--dark);
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(26,35,50,.08);
+  transition:background .2s, color .2s, box-shadow .2s}
+
+.clients-slider-nav:hover {
+  background:var(--teal);
+  color:#fff;
+  border-color:var(--teal);
+  box-shadow:0 4px 14px rgba(0,180,180,.25)}
+
+.clients-slider-nav:focus-visible {
+  outline:2px solid var(--teal);
+  outline-offset:2px}
+
+.clients-slider-dots {
+  position:absolute;
+  left:50%;
+  bottom:-36px;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px}
+
+.clients-slider-dot {
+  width:8px;
+  height:8px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:rgba(26,35,50,.2);
+  cursor:pointer;
+  transition:background .2s, transform .2s}
+
+.clients-slider-dot[aria-selected="true"] {
+  background:var(--teal);
+  transform:scale(1.15)}
+
+.clients-slider-dot:focus-visible {
+  outline:2px solid var(--teal);
+  outline-offset:2px}
+
+@media (max-width:640px) {
+  .clients-slider {
+    gap:0}
+
+  .clients-slider-nav {
+    position:absolute;
+    top:50%;
+    z-index:2;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    box-shadow:0 2px 12px rgba(26,35,50,.12)}
+
+  .clients-slider-nav--prev {
+    left:4px}
+
+  .clients-slider-nav--next {
+    right:4px}
+
+  .clients-slider-viewport {
+    margin:0 36px}
+
+  .clients-logo-card {
+    flex:1 1 45%;
+    max-width:none;
+    min-height:96px;
+    padding:16px 12px}
+
+  .clients-logo-card img {
+    max-height:52px}
+
+  .clients-slider-dots {
+    bottom:-32px}
+}
 
 .cta-banner {
   background:var(--teal);

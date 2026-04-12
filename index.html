@@ -157,9 +157,39 @@
     <p>From luxury retail to logistics giants — a prestigious portfolio of clients across the Kingdom.</p>
   </div>
   <div class="clients-showcase">
-    <figure class="clients-showcase-figure">
-      <img class="clients-showcase-img" src="assets/images/clients-logos-grid.png" width="1024" height="471" alt="Client logos including Abdul Latif Jameel, Aramex, FedEx, DHL, UPS, Amazon, IKEA, luxury brands, Saudi entities, and other regional partners." loading="lazy" decoding="async"/>
-    </figure>
+    <div class="clients-slider" data-clients-slider role="region" aria-roledescription="carousel" aria-label="Client logos">
+      <button type="button" class="clients-slider-nav clients-slider-nav--prev" data-clients-prev aria-label="Show previous client logos">
+        <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></span>
+      </button>
+      <div class="clients-slider-viewport">
+        <div class="clients-slider-track" data-clients-track>
+          <div class="clients-slider-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+            <div class="clients-slide-inner">
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-01.png" width="256" height="235" alt="Abdul Latif Jameel" loading="lazy" decoding="async"/></div>
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-02.png" width="256" height="235" alt="XPL Xpanders" loading="lazy" decoding="async"/></div>
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-03.png" width="256" height="235" alt="Tejoury" loading="lazy" decoding="async"/></div>
+            </div>
+          </div>
+          <div class="clients-slider-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+            <div class="clients-slide-inner">
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-04.png" width="256" height="235" alt="io" loading="lazy" decoding="async"/></div>
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-05.png" width="256" height="235" alt="Saudi Post SPL" loading="lazy" decoding="async"/></div>
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-06.png" width="256" height="235" alt="Aramex" loading="lazy" decoding="async"/></div>
+            </div>
+          </div>
+          <div class="clients-slider-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+            <div class="clients-slide-inner clients-slide-inner--few">
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-07.png" width="256" height="235" alt="Prada" loading="lazy" decoding="async"/></div>
+              <div class="clients-logo-card"><img src="assets/images/clients-tile-08.png" width="256" height="235" alt="Bulgari" loading="lazy" decoding="async"/></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="clients-slider-nav clients-slider-nav--next" data-clients-next aria-label="Show next client logos">
+        <span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></span>
+      </button>
+      <div class="clients-slider-dots" data-clients-dots role="tablist" aria-label="Slide selection"></div>
+    </div>
   </div>
 </section>
 
