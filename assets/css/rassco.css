@@ -682,6 +682,65 @@ a.div-card:focus-visible {
 .p-cta:hover {
   color:#00e5e5}
 
+.clients-page-intro {
+  max-width:720px;
+  margin:0 auto;
+  padding:32px clamp(20px, 4vw, 48px) 16px;
+  text-align:center}
+
+.clients-page-intro h1 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
+  font-size:clamp(28px, 4vw, 40px);
+  font-weight:900;
+  color:var(--dark);
+  line-height:1.15;
+  margin:12px 0 8px}
+
+.clients-page-intro__prose {
+  margin:0;
+  text-align:center}
+
+.clients-page-intro__prose p {
+  font-size:15px;
+  line-height:1.75;
+  color:var(--mid);
+  margin:0}
+
+.clients-page-ctas {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:clamp(16px, 3vw, 40px);
+  margin-top:28px;
+  padding-bottom:8px}
+
+.clients-page-cta {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:4px;
+  text-decoration:none;
+  color:inherit;
+  transition:color .2s ease}
+
+.clients-page-cta:hover {
+  color:var(--teal)}
+
+.clients-page-cta-label {
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--mid)}
+
+.clients-page-cta:hover .clients-page-cta-label {
+  color:var(--teal)}
+
+.clients-page-cta-value {
+  font-size:15px;
+  font-weight:700;
+  color:var(--dark)}
+
 .clients-section {
   position:relative;
   padding:80px 48px;
