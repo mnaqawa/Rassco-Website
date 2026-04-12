@@ -574,7 +574,7 @@ a.div-card--investment:focus-visible {
   transition:max-height .4s ease}
 
 .div-card:hover .div-content p {
-  max-height:80px}
+  max-height:120px}
 
 .div-link {
   display:inline-flex;
