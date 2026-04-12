@@ -1431,17 +1431,18 @@ body.sector-theme--investment {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:clamp(8px, 1.5vw, 14px) clamp(12px, 2.2vw, 20px);
-  background:#fff;
-  border-radius:10px;
-  box-shadow:0 10px 36px rgba(0,0,0,.22)}
+  padding:0;
+  background:transparent;
+  border-radius:0;
+  box-shadow:none}
 
 .sector-hero-title-logo {
   display:block;
   height:clamp(48px, 11vw, 96px);
   width:auto;
   max-width:min(400px, 92vw);
-  object-fit:contain}
+  object-fit:contain;
+  filter:drop-shadow(0 2px 14px rgba(0,0,0,.5))}
 
 .sector-hero-lead {
   font-size:15px;
