@@ -1,7 +1,5 @@
-# Install (from repo root):
-#   python3 -m pip install --user -r scripts/requirements-tools.txt
-# Run:
-#   python3 scripts/process_client_logos.py
-#   (or: bash scripts/run-process-logos.sh)
+# Ubuntu 24+: use venv (run-process-logos.sh creates .venv-logo automatically):
+#   bash scripts/run-process-logos.sh
+# Or: .venv-logo/bin/pip install -r scripts/requirements-tools.txt
 pillow>=10.0.0
 numpy>=1.24.0

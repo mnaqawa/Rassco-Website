@@ -4,3 +4,6 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Local venv for scripts/process_client_logos.py (created by run-process-logos.sh)
+.venv-logo/

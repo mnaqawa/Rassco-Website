@@ -3,23 +3,19 @@
 Process client logo PNGs: knock out near-white backgrounds, trim, normalize
 height, add transparent padding, save optimized PNG + WebP.
 
-Ubuntu / Debian (from site root, e.g. /var/www/rassco):
+Ubuntu 24+ blocks system pip (PEP 668). Use the helper script (creates .venv-logo):
 
-  sudo apt update
-  sudo apt install -y python3 python3-pip
-  python3 -m pip install --user -r scripts/requirements-tools.txt
-  python3 scripts/process_client_logos.py
+  sudo apt install -y python3 python3-venv
+  cd /var/www/rassco   # or your site root
+  bash scripts/run-process-logos.sh
 
-Or one step:  bash scripts/run-process-logos.sh
+Manual venv (same as the script):
 
-Note: use python3 / pip — the command "python" is often not installed.
-The requirements file is NOT executable; do not run it as a shell command.
+  python3 -m venv .venv-logo
+  .venv-logo/bin/pip install -r scripts/requirements-tools.txt
+  .venv-logo/bin/python scripts/process_client_logos.py
 
-If pip errors with "externally-managed-environment", use a venv:
-
-  python3 -m venv .venv-logo && . .venv-logo/bin/activate
-  pip install -r scripts/requirements-tools.txt
-  python scripts/process_client_logos.py
+Use python3 — "python" is often missing. Do not run requirements-tools.txt as a shell command.
 """
 from __future__ import annotations
 
