@@ -109,42 +109,15 @@ a {
 .nav-left {
   display:flex;
   align-items:center;
-  gap:14px}
-
-.nav-logo-icon {
-  width:46px;
-  height:46px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  gap:14px;
   flex-shrink:0}
 
-.nav-logo-img {
-  width:46px;
-  height:46px;
+.nav-logo-full {
   display:block;
-  flex-shrink:0}
-
-.nav-logo-text {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  line-height:1}
-
-.nav-brand-name {
-  font-size:19px;
-  font-weight:900;
-  letter-spacing:1.5px;
-  color:#424242;
-  text-transform:uppercase}
-
-.nav-brand-sub {
-  font-size:10px;
-  font-weight:600;
-  letter-spacing:3.5px;
-  color:#888;
-  margin-top:2px;
-  text-transform:uppercase}
+  height:42px;
+  width:auto;
+  max-width:min(200px, 42vw);
+  object-fit:contain}
 
 .nav-links {
   display:flex;
@@ -192,28 +165,42 @@ a {
 .hero-main {
   position:relative;
   overflow:hidden;
-  background:#414142;
+  background:#f5f8f9;
   min-height:min(560px, 78vh)}
 
-.hero-main-img {
+.hero-main--brand .hero-main-img {
   position:absolute;
   inset:0;
-  background:url('https://images.unsplash.com/photo-1663900108404-a05e8bf82cda?w=1200&q=85') center/cover;
+  z-index:0;
+  background-image:url('../images/hero-background-alt.png');
+  background-size:cover;
+  background-position:center right;
+  background-repeat:no-repeat;
   transition:transform 8s ease}
 
-.hero-main:hover .hero-main-img {
-  transform:scale(1.04)}
+.hero-main--brand:hover .hero-main-img {
+  transform:scale(1.02)}
 
 .hero-main-overlay {
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.3) 55%,rgba(0,100,100,.15) 100%)}
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(
+    90deg,
+    rgba(255,255,255,.97) 0%,
+    rgba(255,255,255,.9) min(32vw, 420px),
+    rgba(255,255,255,.55) 48%,
+    rgba(255,255,255,.15) 62%,
+    transparent 82%
+  )}
 
 .hero-main-content {
   position:absolute;
   bottom:0;
   left:0;
   right:0;
+  z-index:2;
   padding:44px clamp(32px, 6vw, 96px) 40px;
   max-width:1200px}
 
@@ -235,18 +222,18 @@ a {
   background:var(--teal);
   border-radius:2px}
 
-.hero-main-content h1 {
+.hero-main--brand .hero-main-content h1 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:clamp(36px, 5vw, 58px);
   font-weight:900;
   line-height:1.08;
-  color:#fff;
+  color:#1e2024;
   margin-bottom:16px;
   letter-spacing:-.5px}
 
-.hero-main-content p {
+.hero-main--brand .hero-main-content p {
   font-size:15px;
-  color:rgba(255,255,255,.65);
+  color:#4a5562;
   max-width:min(560px, 90vw);
   line-height:1.75;
   margin-bottom:28px}
@@ -281,6 +268,14 @@ a {
   color:rgba(255,255,255,.6);
   border-bottom:1px solid rgba(255,255,255,.3);
   padding-bottom:2px}
+
+.hero-main--brand .hero-cta-ghost {
+  color:var(--teal-d);
+  border-bottom-color:rgba(14,142,140,.45)}
+
+.hero-main--brand .hero-cta-ghost:hover {
+  color:var(--teal);
+  border-bottom-color:var(--teal)}
 
 .hero-cards {
   display:grid;
@@ -981,8 +976,12 @@ a.nav-left {
   gap:12px;
   margin-bottom:16px}
 
-.footer-logo-img {
+.footer-logo-mark-img {
   display:block;
+  height:48px;
+  width:auto;
+  max-width:min(240px, 70vw);
+  object-fit:contain;
   flex-shrink:0}
 
 .footer-logo-wordmark-title {
