@@ -765,19 +765,18 @@ a.div-card:focus-visible {
   transform:scale(1.04)}
 
 .clients-logo-card:hover img {
-  mix-blend-mode:normal;
-  filter:contrast(1.05) saturate(1.05)}
+  filter:grayscale(0) contrast(1.08) saturate(1.1)}
 
 .clients-logo-card img {
   display:block;
   max-width:100%;
   width:auto;
   height:auto;
-  max-height:62px;
+  max-height:64px;
   object-fit:contain;
   object-position:center;
-  mix-blend-mode:multiply;
-  filter:contrast(1.08) saturate(1.03);
+  filter:grayscale(1) contrast(1.06);
+  transition:filter .35s ease;
   -webkit-backface-visibility:hidden;
   backface-visibility:hidden}
 
@@ -827,6 +826,10 @@ a.div-card:focus-visible {
 
   .clients-logo-card:hover {
     transform:none}
+
+  .clients-logo-card img,
+  .clients-logo-card:hover img {
+    filter:contrast(1.08) saturate(1.06)}
 }
 
 .cta-banner {

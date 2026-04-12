@@ -19,7 +19,8 @@
   });
 })();
 
-/* Paths relative to site root; matches ClientLogos/ in repo (spaces in filenames). */
+/* Paths relative to site root; matches ClientLogos/ in repo (spaces in filenames).
+   Re-order this list to show priority clients first in the marquee. PNG + .webp (same base name). */
 var RASSCO_CLIENT_LOGOS = [
   "ClientLogos/Seperate Clients-01.png",
   "ClientLogos/Seperate Clients-02.png",
@@ -91,18 +92,30 @@ var RASSCO_CLIENT_LOGOS = [
   "ClientLogos/Seperate Clients-68.png"
 ];
 
+function appendLogoPicture(card, pngPath) {
+  var webpPath = pngPath.replace(/\.png$/i, ".webp");
+  var picture = document.createElement("picture");
+  var source = document.createElement("source");
+  source.type = "image/webp";
+  source.srcset = encodeURI(webpPath);
+  var img = document.createElement("img");
+  img.src = encodeURI(pngPath);
+  img.alt = "Client partner logo";
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.fetchPriority = "low";
+  picture.appendChild(source);
+  picture.appendChild(img);
+  card.appendChild(picture);
+}
+
 function buildClientMarqueeSets(paths) {
   var set = document.createElement("div");
   set.className = "clients-marquee-set";
   for (var i = 0; i < paths.length; i++) {
     var card = document.createElement("div");
     card.className = "clients-logo-card";
-    var img = document.createElement("img");
-    img.src = encodeURI(paths[i]);
-    img.alt = "Client partner logo";
-    img.loading = "lazy";
-    img.decoding = "async";
-    card.appendChild(img);
+    appendLogoPicture(card, paths[i]);
     set.appendChild(card);
   }
   return set;
