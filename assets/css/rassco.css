@@ -493,6 +493,15 @@ a.div-card:focus-visible {
   color:#fff;
   border-radius:2px}
 
+.div-tag--long {
+  max-width:100%;
+  padding:5px 10px;
+  font-size:7px;
+  letter-spacing:1px;
+  line-height:1.35;
+  white-space:normal;
+  text-align:left}
+
 .div-content h3 {
   font-size:20px;
   font-weight:800;
