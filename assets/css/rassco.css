@@ -187,15 +187,13 @@ a {
   color:#fff}
 
 .hero {
-  display:grid;
-  grid-template-columns:60% 40%;
-  grid-template-rows:520px;
-  border-bottom:3px solid var(--teal)}
+  width:100%}
 
 .hero-main {
   position:relative;
   overflow:hidden;
-  background:#414142}
+  background:#414142;
+  min-height:min(560px, 78vh)}
 
 .hero-main-img {
   position:absolute;
@@ -216,7 +214,8 @@ a {
   bottom:0;
   left:0;
   right:0;
-  padding:44px 44px 36px}
+  padding:44px clamp(32px, 6vw, 96px) 40px;
+  max-width:1200px}
 
 .hero-kicker {
   display:inline-flex;
@@ -238,7 +237,7 @@ a {
 
 .hero-main-content h1 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
-  font-size:52px;
+  font-size:clamp(36px, 5vw, 58px);
   font-weight:900;
   line-height:1.08;
   color:#fff;
@@ -246,9 +245,9 @@ a {
   letter-spacing:-.5px}
 
 .hero-main-content p {
-  font-size:14px;
+  font-size:15px;
   color:rgba(255,255,255,.65);
-  max-width:440px;
+  max-width:min(560px, 90vw);
   line-height:1.75;
   margin-bottom:28px}
 
@@ -283,16 +282,30 @@ a {
   border-bottom:1px solid rgba(255,255,255,.3);
   padding-bottom:2px}
 
-.hero-right {
+.hero-cards {
   display:grid;
-  grid-template-rows:1fr 1fr;
-  border-left:1px solid rgba(255,255,255,.1)}
+  grid-template-columns:1fr 1fr;
+  width:100%;
+  border-top:1px solid rgba(255,255,255,.12);
+  border-bottom:3px solid var(--teal);
+  background:#2a2a2b}
 
 .hero-mini {
   position:relative;
+  display:block;
   overflow:hidden;
   background:#414142;
-  border-bottom:1px solid rgba(255,255,255,.08)}
+  border-right:1px solid rgba(255,255,255,.1);
+  min-height:min(280px, 42vw);
+  color:inherit;
+  text-decoration:none;
+  outline-offset:-2px}
+
+.hero-mini:last-child {
+  border-right:none}
+
+.hero-mini:focus-visible {
+  outline:2px solid var(--teal)}
 
 .hero-mini-img {
   position:absolute;
@@ -1057,21 +1070,14 @@ a.cta-banner-btn {
     justify-content:center;
     text-align:center}
 
-  .hero {
-    grid-template-columns:1fr;
-    grid-template-rows:auto;
-    border-bottom:3px solid var(--teal)}
-
   .hero-main {
-    min-height:420px;
-    grid-row:1}
+    min-height:min(440px, 65vh)}
 
-  .hero-right {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:minmax(200px, 36vw);
-    border-left:none;
-    border-top:1px solid rgba(255,255,255,.1)}
+  .hero-cards {
+    grid-template-columns:1fr 1fr}
+
+  .hero-mini {
+    min-height:min(220px, 38vw)}
 
   .hero-main-content {
     padding:32px clamp(20px, 4vw, 44px) 28px}
@@ -1169,9 +1175,16 @@ a.cta-banner-btn {
 }
 
 @media (max-width:520px) {
-  .hero-right {
-    grid-template-columns:1fr;
-    grid-template-rows:repeat(2, minmax(200px, 50vw))}
+  .hero-cards {
+    grid-template-columns:1fr}
+
+  .hero-mini {
+    min-height:200px;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.1)}
+
+  .hero-mini:last-child {
+    border-bottom:none}
 
   .stat-item {
     flex:1 1 45%}
