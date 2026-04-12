@@ -103,7 +103,6 @@ function appendLogoPicture(card, pngPath) {
   img.alt = "Client partner logo";
   img.loading = "lazy";
   img.decoding = "async";
-  img.fetchPriority = "low";
   picture.appendChild(source);
   picture.appendChild(img);
   card.appendChild(picture);

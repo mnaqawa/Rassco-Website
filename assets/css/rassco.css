@@ -763,11 +763,7 @@ a.div-card:focus-visible {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:36px;
   font-weight:900;
-  margin-bottom:10px}
-
-.clients-header p {
-  font-size:14px;
-  color:var(--mid)}
+  margin-bottom:0}
 
 .clients-showcase {
   position:relative;
@@ -800,42 +796,43 @@ a.div-card:focus-visible {
   flex-direction:row;
   flex-wrap:nowrap;
   align-items:center;
-  gap:20px;
-  padding-right:20px}
+  gap:28px;
+  padding-right:28px}
 
 .clients-logo-card {
   flex:0 0 auto;
-  width:176px;
-  min-height:88px;
+  width:232px;
+  min-height:112px;
   box-sizing:border-box;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:16px 18px;
-  background:transparent;
-  border:1px solid transparent;
-  border-radius:10px;
-  transition:background .22s ease, border-color .22s ease, transform .22s ease;
-  box-shadow:none}
+  padding:22px 24px;
+  background:#fff;
+  border:1px solid rgba(26,35,50,.07);
+  border-radius:12px;
+  transition:background .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease;
+  box-shadow:0 1px 3px rgba(26,35,50,.06)}
 
 .clients-logo-card:hover {
-  background:rgba(255,255,255,.5);
-  border-color:rgba(26,35,50,.08);
-  transform:scale(1.04)}
+  background:#fff;
+  border-color:rgba(26,35,50,.1);
+  box-shadow:0 6px 20px rgba(26,35,50,.1);
+  transform:translateY(-2px)}
 
 .clients-logo-card:hover img {
-  filter:grayscale(0) contrast(1.08) saturate(1.1)}
+  filter:contrast(1.04) saturate(1.03)}
 
 .clients-logo-card img {
   display:block;
   max-width:100%;
   width:auto;
   height:auto;
-  max-height:64px;
+  max-height:84px;
   object-fit:contain;
   object-position:center;
-  filter:grayscale(1) contrast(1.06);
-  transition:filter .35s ease;
+  filter:contrast(1.03);
+  transition:filter .35s ease, transform .35s ease;
   -webkit-backface-visibility:hidden;
   backface-visibility:hidden}
 
@@ -847,16 +844,16 @@ a.div-card:focus-visible {
 
 @media (max-width:640px) {
   .clients-logo-card {
-    width:140px;
-    min-height:76px;
-    padding:12px 12px}
+    width:168px;
+    min-height:92px;
+    padding:16px 14px}
 
   .clients-logo-card img {
-    max-height:52px}
+    max-height:64px}
 
   .clients-marquee-set {
-    gap:14px;
-    padding-right:14px}
+    gap:18px;
+    padding-right:18px}
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -888,7 +885,7 @@ a.div-card:focus-visible {
 
   .clients-logo-card img,
   .clients-logo-card:hover img {
-    filter:contrast(1.08) saturate(1.06)}
+    filter:contrast(1.06)}
 }
 
 .cta-banner {
