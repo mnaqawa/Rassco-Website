@@ -30,7 +30,11 @@ a {
   --dark:#414142;
   --gray:#F6F6F6;
   --mid:#888;
-  --border:#E8E8E8}
+  --border:#E8E8E8;
+  --division-logistics:#01b0b0;
+  --division-healthcare:#1b75bb;
+  --division-tech:#009245;
+  --division-investment:#ab832e}
 
 .site-header {
   position:sticky;
@@ -418,7 +422,23 @@ a {
 .divisions-grid {
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
-  border-bottom:3px solid var(--teal)}
+  position:relative;
+  border-bottom:0}
+
+.divisions-grid::after {
+  content:"";
+  display:block;
+  grid-column:1 / -1;
+  height:3px;
+  background:linear-gradient(90deg,
+    var(--division-logistics) 0%,
+    var(--division-logistics) 25%,
+    var(--division-healthcare) 25%,
+    var(--division-healthcare) 50%,
+    var(--division-tech) 50%,
+    var(--division-tech) 75%,
+    var(--division-investment) 75%,
+    var(--division-investment) 100%)}
 
 a.div-card {
   display:block;
@@ -430,6 +450,42 @@ a.div-card:focus-visible {
   outline:2px solid var(--teal);
   outline-offset:-2px;
   z-index:2}
+
+a.div-card--logistics:focus-visible {
+  outline-color:var(--division-logistics)}
+
+a.div-card--healthcare:focus-visible {
+  outline-color:var(--division-healthcare)}
+
+a.div-card--tech:focus-visible {
+  outline-color:var(--division-tech)}
+
+a.div-card--investment:focus-visible {
+  outline-color:var(--division-investment)}
+
+.div-card--logistics .div-tag {
+  background:var(--division-logistics)}
+
+.div-card--logistics .div-link {
+  color:var(--division-logistics)}
+
+.div-card--healthcare .div-tag {
+  background:var(--division-healthcare)}
+
+.div-card--healthcare .div-link {
+  color:var(--division-healthcare)}
+
+.div-card--tech .div-tag {
+  background:var(--division-tech)}
+
+.div-card--tech .div-link {
+  color:var(--division-tech)}
+
+.div-card--investment .div-tag {
+  background:var(--division-investment)}
+
+.div-card--investment .div-link {
+  color:var(--division-investment)}
 
 .div-card {
   position:relative;
@@ -753,6 +809,10 @@ a.div-card:focus-visible {
   background-size:56px 56px;
   background-position:center top}
 
+.clients-section--static {
+  background-color:#f5f7f9;
+  background-image:none}
+
 .clients-header {
   position:relative;
   z-index:1;
@@ -772,6 +832,23 @@ a.div-card:focus-visible {
   margin:0 auto;
   padding:0 0 32px}
 
+.clients-showcase--grid {
+  max-width:1200px;
+  padding:0 clamp(16px, 3vw, 32px) 40px}
+
+.clients-logo-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  gap:clamp(20px, 3vw, 36px) clamp(16px, 2.5vw, 28px);
+  list-style:none;
+  margin:0;
+  padding:0;
+  justify-items:center}
+
+.clients-section--static .clients-logo-grid .clients-logo-card {
+  width:100%;
+  max-width:280px}
+
 .clients-marquee {
   position:relative;
   width:100%}
@@ -786,7 +863,7 @@ a.div-card:focus-visible {
   display:flex;
   width:max-content;
   will-change:transform;
-  animation:clients-marquee-scroll 95s linear infinite}
+  animation:clients-marquee-scroll 200s linear infinite}
 
 .clients-marquee:hover .clients-marquee-track {
   animation-play-state:paused}
@@ -808,16 +885,15 @@ a.div-card:focus-visible {
   align-items:center;
   justify-content:center;
   padding:22px 24px;
-  background:#fff;
-  border:1px solid rgba(26,35,50,.07);
+  background:transparent;
+  border:1px solid transparent;
   border-radius:12px;
-  transition:background .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease;
-  box-shadow:0 1px 3px rgba(26,35,50,.06)}
+  transition:background .22s ease, border-color .22s ease, transform .22s ease;
+  box-shadow:none}
 
 .clients-logo-card:hover {
-  background:#fff;
-  border-color:rgba(26,35,50,.1);
-  box-shadow:0 6px 20px rgba(26,35,50,.1);
+  background:rgba(255,255,255,.45);
+  border-color:rgba(26,35,50,.06);
   transform:translateY(-2px)}
 
 .clients-logo-card:hover img {
@@ -843,10 +919,17 @@ a.div-card:focus-visible {
     transform:translateX(-50%)}}
 
 @media (max-width:640px) {
+  .clients-logo-grid {
+    grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
+    gap:20px 14px}
+
   .clients-logo-card {
     width:168px;
     min-height:92px;
     padding:16px 14px}
+
+  .clients-section--static .clients-logo-grid .clients-logo-card {
+    max-width:none}
 
   .clients-logo-card img {
     max-height:64px}
@@ -1267,6 +1350,22 @@ a.cta-banner-btn {
 }
 
 /* —— Sector hub & service detail subpages —— */
+body.sector-theme--logistics {
+  --sector-accent:var(--division-logistics);
+  --sector-accent-glow:rgba(1,176,176,.14)}
+
+body.sector-theme--healthcare {
+  --sector-accent:var(--division-healthcare);
+  --sector-accent-glow:rgba(27,117,187,.14)}
+
+body.sector-theme--tech {
+  --sector-accent:var(--division-tech);
+  --sector-accent-glow:rgba(0,146,69,.14)}
+
+body.sector-theme--investment {
+  --sector-accent:var(--division-investment);
+  --sector-accent-glow:rgba(171,131,46,.14)}
+
 .subpage-main {
   padding-top:0}
 
@@ -1279,7 +1378,7 @@ a.cta-banner-btn {
   color:var(--mid)}
 
 .sub-breadcrumb a {
-  color:var(--teal);
+  color:var(--sector-accent, var(--teal));
   text-decoration:none}
 
 .sub-breadcrumb a:hover {
@@ -1298,7 +1397,7 @@ a.cta-banner-btn {
   margin-bottom:0;
   background-size:cover;
   background-position:center;
-  border-bottom:3px solid var(--teal)}
+  border-bottom:3px solid var(--sector-accent, var(--teal))}
 
 .sector-hero::after {
   content:"";
@@ -1319,7 +1418,7 @@ a.cta-banner-btn {
   font-weight:700;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:var(--teal);
+  color:var(--sector-accent, var(--teal));
   margin-bottom:10px}
 
 .sector-hero h1 {
@@ -1381,7 +1480,7 @@ a.cta-banner-btn {
   font-weight:800;
   letter-spacing:1.2px;
   text-transform:uppercase;
-  color:var(--teal);
+  color:var(--sector-accent, var(--teal));
   margin:0 0 12px}
 
 .sector-pillar ul {
@@ -1417,7 +1516,7 @@ a.cta-banner-btn {
   top:.55em;
   width:8px;
   height:8px;
-  background:var(--teal);
+  background:var(--sector-accent, var(--teal));
   border-radius:1px}
 
 .sector-services-head {
@@ -1447,8 +1546,8 @@ a.sector-service-card {
   transition:border-color .2s, box-shadow .2s}
 
 a.sector-service-card:hover {
-  border-color:var(--teal);
-  box-shadow:0 8px 28px rgba(0,180,180,.1)}
+  border-color:var(--sector-accent, var(--teal));
+  box-shadow:0 8px 28px var(--sector-accent-glow, rgba(24,178,176,.1))}
 
 .sector-service-card strong {
   font-size:16px;
@@ -1457,7 +1556,7 @@ a.sector-service-card:hover {
 .sector-service-card span {
   font-size:12px;
   font-weight:600;
-  color:var(--teal)}
+  color:var(--sector-accent, var(--teal))}
 
 .sector-service-card--soon {
   display:flex;

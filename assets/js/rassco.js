@@ -108,14 +108,18 @@ function appendLogoPicture(card, pngPath) {
   card.appendChild(picture);
 }
 
+function buildLogoCard(pngPath) {
+  var card = document.createElement("div");
+  card.className = "clients-logo-card";
+  appendLogoPicture(card, pngPath);
+  return card;
+}
+
 function buildClientMarqueeSets(paths) {
   var set = document.createElement("div");
   set.className = "clients-marquee-set";
   for (var i = 0; i < paths.length; i++) {
-    var card = document.createElement("div");
-    card.className = "clients-logo-card";
-    appendLogoPicture(card, paths[i]);
-    set.appendChild(card);
+    set.appendChild(buildLogoCard(paths[i]));
   }
   return set;
 }
@@ -133,4 +137,16 @@ function buildClientMarqueeSets(paths) {
   document.addEventListener("visibilitychange", function () {
     track.style.animationPlayState = document.hidden ? "paused" : "running";
   });
+})();
+
+(function initClientsGrid() {
+  var grid = document.querySelector("[data-clients-grid]");
+  if (!grid || !RASSCO_CLIENT_LOGOS.length) return;
+
+  grid.innerHTML = "";
+  for (var i = 0; i < RASSCO_CLIENT_LOGOS.length; i++) {
+    var card = buildLogoCard(RASSCO_CLIENT_LOGOS[i]);
+    card.setAttribute("role", "listitem");
+    grid.appendChild(card);
+  }
 })();
