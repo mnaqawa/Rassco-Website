@@ -1286,6 +1286,18 @@ a.cta-banner-btn {
   margin:0 auto;
   padding:48px clamp(20px, 4vw, 48px) 64px}
 
+.sector-prose {
+  margin:0 0 40px}
+
+.sector-prose p {
+  font-size:15px;
+  line-height:1.75;
+  color:var(--mid);
+  margin:0 0 18px}
+
+.sector-prose p:last-child {
+  margin-bottom:0}
+
 .sector-tagline {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:18px;
