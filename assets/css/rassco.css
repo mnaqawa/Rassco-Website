@@ -713,54 +713,46 @@ a.div-card:focus-visible {
 .clients-showcase {
   position:relative;
   z-index:1;
-  max-width:1040px;
+  max-width:100%;
   margin:0 auto;
-  padding:0 clamp(8px, 2vw, 0) 48px}
+  padding:0 0 32px}
 
-.clients-slider {
+.clients-marquee {
   position:relative;
-  display:flex;
-  align-items:center;
-  gap:clamp(8px, 2vw, 16px)}
+  width:100%}
 
-.clients-slider-viewport {
-  flex:1;
-  min-width:0;
+.clients-marquee-viewport {
   overflow:hidden;
-  border-radius:4px}
-
-.clients-slider-track {
-  display:flex;
   width:100%;
-  transition:transform .5s cubic-bezier(.25, .1, .25, 1);
-  will-change:transform}
+  mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent)}
 
-.clients-slider-slide {
-  flex:0 0 100%;
-  min-width:0;
-  box-sizing:border-box;
-  padding:8px 0 4px}
-
-.clients-slide-inner {
+.clients-marquee-track {
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:stretch;
-  gap:clamp(12px, 2.5vw, 20px);
-  max-width:920px;
-  margin:0 auto}
+  width:max-content;
+  will-change:transform;
+  animation:clients-marquee-scroll 95s linear infinite}
 
-.clients-slide-inner--few {
-  max-width:520px}
+.clients-marquee:hover .clients-marquee-track {
+  animation-play-state:paused}
+
+.clients-marquee-set {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  align-items:stretch;
+  gap:14px;
+  padding-right:14px}
 
 .clients-logo-card {
-  flex:1 1 160px;
-  max-width:220px;
-  min-height:112px;
+  flex:0 0 auto;
+  width:168px;
+  min-height:100px;
+  box-sizing:border-box;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:20px 18px;
+  padding:18px 14px;
   background:#fff;
   border:1px solid #dcdfe3;
   border-radius:2px;
@@ -771,96 +763,52 @@ a.div-card:focus-visible {
   max-width:100%;
   width:auto;
   height:auto;
-  max-height:64px;
+  max-height:56px;
   object-fit:contain}
 
-.clients-slider-nav {
-  flex-shrink:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:44px;
-  height:44px;
-  padding:0;
-  border:1px solid #dcdfe3;
-  border-radius:50%;
-  background:#fff;
-  color:var(--dark);
-  cursor:pointer;
-  box-shadow:0 2px 8px rgba(26,35,50,.08);
-  transition:background .2s, color .2s, box-shadow .2s}
-
-.clients-slider-nav:hover {
-  background:var(--teal);
-  color:#fff;
-  border-color:var(--teal);
-  box-shadow:0 4px 14px rgba(0,180,180,.25)}
-
-.clients-slider-nav:focus-visible {
-  outline:2px solid var(--teal);
-  outline-offset:2px}
-
-.clients-slider-dots {
-  position:absolute;
-  left:50%;
-  bottom:-36px;
-  transform:translateX(-50%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px}
-
-.clients-slider-dot {
-  width:8px;
-  height:8px;
-  padding:0;
-  border:0;
-  border-radius:50%;
-  background:rgba(26,35,50,.2);
-  cursor:pointer;
-  transition:background .2s, transform .2s}
-
-.clients-slider-dot[aria-selected="true"] {
-  background:var(--teal);
-  transform:scale(1.15)}
-
-.clients-slider-dot:focus-visible {
-  outline:2px solid var(--teal);
-  outline-offset:2px}
+@keyframes clients-marquee-scroll {
+  from {
+    transform:translateX(0)}
+  to {
+    transform:translateX(-50%)}}
 
 @media (max-width:640px) {
-  .clients-slider {
-    gap:0}
-
-  .clients-slider-nav {
-    position:absolute;
-    top:50%;
-    z-index:2;
-    transform:translateY(-50%);
-    width:40px;
-    height:40px;
-    box-shadow:0 2px 12px rgba(26,35,50,.12)}
-
-  .clients-slider-nav--prev {
-    left:4px}
-
-  .clients-slider-nav--next {
-    right:4px}
-
-  .clients-slider-viewport {
-    margin:0 36px}
-
   .clients-logo-card {
-    flex:1 1 45%;
-    max-width:none;
-    min-height:96px;
-    padding:16px 12px}
+    width:132px;
+    min-height:88px;
+    padding:14px 10px}
 
   .clients-logo-card img {
-    max-height:52px}
+    max-height:48px}
 
-  .clients-slider-dots {
-    bottom:-32px}
+  .clients-marquee-set {
+    gap:10px;
+    padding-right:10px}
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .clients-marquee-viewport {
+    mask-image:none;
+    -webkit-mask-image:none}
+
+  .clients-marquee-track {
+    animation:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    max-width:960px;
+    margin:0 auto;
+    will-change:auto}
+
+  .clients-marquee-set[aria-hidden="true"] {
+    display:none}
+
+  .clients-marquee-set {
+    flex-wrap:wrap;
+    justify-content:center;
+    width:100%;
+    padding-right:0}
 }
 
 .cta-banner {
