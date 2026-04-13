@@ -1683,6 +1683,75 @@ a.sector-service-card:hover {
   line-height:1.65;
   color:var(--dark)}
 
+/* —— RTL layout polish (Arabic pages) —— */
+html[dir="rtl"] .site-header nav,
+html[dir="rtl"] .nav-panel,
+html[dir="rtl"] .nav-links {
+  direction:rtl}
+
+html[dir="rtl"] .hero-main-content,
+html[dir="rtl"] .wwa-left,
+html[dir="rtl"] .wwa-right,
+html[dir="rtl"] .divisions-header,
+html[dir="rtl"] .divisions-header p,
+html[dir="rtl"] .portfolio-header,
+html[dir="rtl"] .p-text,
+html[dir="rtl"] .sub-breadcrumb,
+html[dir="rtl"] .sector-hero-inner,
+html[dir="rtl"] .sector-body,
+html[dir="rtl"] .sector-prose p,
+html[dir="rtl"] .market-hero,
+html[dir="rtl"] .market-drivers,
+html[dir="rtl"] .footer-top,
+html[dir="rtl"] .footer-bottom {
+  text-align:right}
+
+html[dir="rtl"] .wwa-left {
+  border-right:none;
+  border-left:1px solid var(--border)}
+
+html[dir="rtl"] .p-text {
+  border-left:none !important;
+  border-right:1px solid rgba(255,255,255,.07)}
+
+html[dir="rtl"] .p-row.reverse .p-text {
+  border-right:none !important;
+  border-left:1px solid rgba(255,255,255,.07)}
+
+html[dir="rtl"] .sub-breadcrumb span {
+  margin:0 8px}
+
+html[dir="rtl"] .sector-highlights li {
+  padding-left:0;
+  padding-right:22px}
+
+html[dir="rtl"] .sector-highlights li::before {
+  left:auto;
+  right:0}
+
+html[dir="rtl"] .sector-pillar ul {
+  padding-left:0;
+  padding-right:18px}
+
+html[dir="rtl"] a.sector-service-card,
+html[dir="rtl"] .sector-service-card--soon {
+  align-items:flex-end}
+
+html[dir="rtl"] .sector-service-logo {
+  object-position:right center}
+
+html[dir="rtl"] .market-driver-list li {
+  grid-template-columns:1fr 36px}
+
+html[dir="rtl"] .market-driver-list li span:last-child {
+  order:1}
+
+html[dir="rtl"] .market-driver-icon {
+  order:2}
+
+html[dir="rtl"] .footer-col ul {
+  align-items:flex-start}
+
 @media (max-width:800px) {
   .sector-pillars {
     grid-template-columns:1fr}
