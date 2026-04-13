@@ -93,6 +93,11 @@ var RASSCO_CLIENT_LOGOS = [
 ];
 
 function appendLogoPicture(card, pngPath) {
+  // Keep client logo URLs rooted at the site base so they work
+  // from both / and /ar/ pages.
+  if (!/^https?:\/\//i.test(pngPath) && pngPath.charAt(0) !== "/") {
+    pngPath = "/" + pngPath;
+  }
   var webpPath = pngPath.replace(/\.png$/i, ".webp");
   var picture = document.createElement("picture");
   var source = document.createElement("source");
