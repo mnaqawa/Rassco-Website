@@ -147,6 +147,16 @@ a {
   font-weight:600;
   color:var(--mid)}
 
+.nav-lang-link {
+  font-size:12px;
+  font-weight:700;
+  color:var(--mid);
+  text-decoration:none;
+  white-space:nowrap}
+
+.nav-lang-link:hover {
+  color:var(--teal)}
+
 .nav-btn {
   padding:9px 22px;
   border-radius:3px;
