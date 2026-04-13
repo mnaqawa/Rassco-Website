@@ -1602,6 +1602,77 @@ a.sector-service-card:hover {
   font-weight:600;
   color:var(--mid)}
 
+/* —— Market opportunities page —— */
+.market-hero {
+  max-width:960px;
+  margin:0 auto;
+  padding:38px clamp(20px, 4vw, 48px) 20px}
+
+.market-hero h1 {
+  font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
+  font-size:clamp(30px, 5vw, 46px);
+  font-weight:900;
+  line-height:1.12;
+  color:var(--dark);
+  margin:12px 0 14px}
+
+.market-hero-prose {
+  margin:0}
+
+.market-drivers {
+  max-width:960px;
+  margin:0 auto;
+  padding:10px clamp(20px, 4vw, 48px) 68px}
+
+.market-drivers-title {
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--dark);
+  margin:0 0 22px}
+
+.market-driver-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:14px}
+
+.market-driver-list li {
+  display:grid;
+  grid-template-columns:36px 1fr;
+  gap:14px;
+  align-items:flex-start;
+  padding:12px 14px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:#fff}
+
+.market-driver-icon {
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--teal-l);
+  color:var(--teal)}
+
+.market-driver-icon svg {
+  width:19px;
+  height:19px;
+  stroke:currentColor;
+  stroke-width:1.9;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round}
+
+.market-driver-list li span:last-child {
+  font-size:14px;
+  line-height:1.65;
+  color:var(--dark)}
+
 @media (max-width:800px) {
   .sector-pillars {
     grid-template-columns:1fr}
