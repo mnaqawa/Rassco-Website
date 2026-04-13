@@ -839,7 +839,7 @@ a.div-card--investment:focus-visible {
 .clients-logo-grid {
   display:grid;
   grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
-  gap:clamp(20px, 3vw, 36px) clamp(16px, 2.5vw, 28px);
+  gap:clamp(12px, 2vw, 20px) clamp(10px, 1.8vw, 16px);
   list-style:none;
   margin:0;
   padding:0;
@@ -921,7 +921,7 @@ a.div-card--investment:focus-visible {
 @media (max-width:640px) {
   .clients-logo-grid {
     grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
-    gap:20px 14px}
+    gap:12px 10px}
 
   .clients-logo-card {
     width:168px;
