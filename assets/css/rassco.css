@@ -140,7 +140,9 @@ a {
 .nav-right {
   display:flex;
   align-items:center;
-  gap:16px}
+  gap:16px;
+  position:relative;
+  padding-inline-start:50px}
 
 .nav-user {
   font-size:12px;
@@ -153,21 +155,24 @@ a {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  border:1px solid rgba(28,188,186,.45);
-  border-radius:50%;
+  border:1px solid rgba(28,188,186,.35);
+  border-radius:12px;
   color:var(--teal-d);
-  background:rgba(28,188,186,.12);
-  box-shadow:0 2px 8px rgba(10,31,39,.08);
+  background:#fff;
+  box-shadow:0 2px 10px rgba(10,31,39,.06);
   text-decoration:none;
   white-space:nowrap;
   transition:all .2s;
-  order:2}
+  position:absolute;
+  inset-inline-start:0;
+  top:50%;
+  transform:translateY(-50%)}
 
 .nav-lang-link:hover {
   color:#fff;
   border-color:var(--teal);
   background:var(--teal);
-  box-shadow:0 6px 14px rgba(24,178,176,.28)}
+  box-shadow:0 8px 16px rgba(24,178,176,.24)}
 
 .nav-lang-link:focus-visible {
   outline:2px solid rgba(28,188,186,.75);
@@ -1283,7 +1288,13 @@ a.cta-banner-btn {
 
   .nav-right {
     padding-top:12px;
-    justify-content:flex-start}
+    justify-content:flex-start;
+    position:static;
+    padding-inline-start:0}
+
+  .nav-lang-link {
+    position:static;
+    transform:none}
 
   .nav-panel .nav-btn {
     width:100%;
