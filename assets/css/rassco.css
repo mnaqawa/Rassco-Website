@@ -785,9 +785,9 @@ a.div-card--investment:focus-visible {
   position:relative;
   overflow:hidden;
   background:
-    radial-gradient(1200px 420px at 8% 18%, rgba(24,178,176,.2), transparent 60%),
-    radial-gradient(800px 360px at 92% 82%, rgba(46,116,183,.16), transparent 62%),
-    linear-gradient(145deg, #132128 0%, #0f1a1f 45%, #121f25 100%)}
+    radial-gradient(1100px 420px at 8% 18%, rgba(24,178,176,.11), transparent 60%),
+    radial-gradient(760px 340px at 92% 82%, rgba(46,116,183,.1), transparent 62%),
+    linear-gradient(145deg, #e8ecef 0%, #dde2e7 48%, #d7dde3 100%)}
 
 .portfolio-section--spotlight .portfolio-header {
   padding-bottom:28px;
@@ -795,16 +795,16 @@ a.div-card--investment:focus-visible {
 
 .portfolio-section--spotlight .portfolio-header p {
   max-width:640px;
-  color:rgba(230,244,247,.82);
+  color:rgba(53,73,82,.82);
   text-align:left}
 
 .portfolio-section--spotlight .p-row {
   margin:0 48px 72px;
-  border:1px solid rgba(170,224,232,.22);
+  border:1px solid rgba(150,164,175,.34);
   border-radius:22px;
   overflow:hidden;
-  background:linear-gradient(150deg, rgba(17,39,48,.82), rgba(14,33,41,.92));
-  box-shadow:0 24px 48px rgba(4,16,21,.34);
+  background:linear-gradient(150deg, rgba(246,248,250,.97), rgba(235,240,244,.97));
+  box-shadow:0 20px 40px rgba(40,54,64,.12);
   grid-template-columns:54% 46%;
   min-height:420px}
 
@@ -815,17 +815,17 @@ a.div-card--investment:focus-visible {
   content:'';
   position:absolute;
   inset:0;
-  background:linear-gradient(120deg, rgba(14,38,47,.42), rgba(24,178,176,.08))}
+  background:linear-gradient(120deg, rgba(32,53,64,.18), rgba(24,178,176,.04))}
 
 .portfolio-section--spotlight .p-img-bg {
-  filter:brightness(.92) saturate(1.05)}
+  filter:brightness(.98) saturate(1.03)}
 
 .portfolio-section--spotlight .p-text {
   border:none;
   padding:56px 56px 60px}
 
 .portfolio-section--spotlight .p-text p {
-  color:rgba(232,246,250,.82);
+  color:rgba(56,73,84,.9);
   font-size:14px;
   line-height:1.95;
   margin-bottom:16px}
