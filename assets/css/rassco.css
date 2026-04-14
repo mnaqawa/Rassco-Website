@@ -847,29 +847,55 @@ a.div-card--investment:focus-visible {
 
 /* What We Deliver page visual balancing */
 .portfolio-section--wwd {
-  background:var(--dark)}
+  background:#f3f5f7}
 
 .portfolio-section--wwd .portfolio-header p {
-  max-width:520px}
+  max-width:520px;
+  color:#4f5f69}
+
+.portfolio-section--wwd .portfolio-header h1,
+.portfolio-section--wwd .portfolio-header h2,
+.portfolio-section--wwd .portfolio-title {
+  color:#24323a}
+
+.portfolio-section--wwd .portfolio-title span {
+  color:var(--teal)}
 
 .portfolio-section--wwd .p-row {
-  min-height:340px}
+  min-height:340px;
+  border-bottom:1px solid #d9e0e6;
+  background:#fff}
 
 .portfolio-section--wwd .p-img {
   min-height:340px}
 
 .portfolio-section--wwd .p-img-bg {
   background-position:center center;
-  filter:brightness(.84) saturate(1.02)}
+  filter:brightness(.9) saturate(1.02)}
 
 .portfolio-section--wwd .p-text {
-  padding:46px 50px}
+  padding:46px 50px;
+  border-left:1px solid #d9e0e6}
+
+.portfolio-section--wwd .p-row.reverse .p-text {
+  border-left:none;
+  border-right:1px solid #d9e0e6}
+
+.portfolio-section--wwd .p-num {
+  color:rgba(36,50,58,.08)}
+
+.portfolio-section--wwd .p-text h3 {
+  color:#24323a}
 
 .portfolio-section--wwd .p-text h3 {
   margin-bottom:14px}
 
 .portfolio-section--wwd .p-text p {
-  margin-bottom:18px}
+  margin-bottom:18px;
+  color:#4f5f69}
+
+.portfolio-section--wwd .p-bullets li {
+  color:#4f5f69}
 
 .portfolio-section--wwd .p-bullets {
   margin-bottom:22px}
@@ -885,6 +911,13 @@ a.div-card--investment:focus-visible {
 
 .portfolio-section--wwd .p-row:nth-of-type(8) .p-img-bg {
   background-position:center 38%}
+
+.portfolio-section--wwd .p-cta {
+  color:var(--teal-d);
+  border-bottom:1px solid rgba(24,178,176,.28)}
+
+.portfolio-section--wwd .p-cta:hover {
+  color:var(--teal)}
 
 .clients-page-intro {
   max-width:720px;
@@ -1886,6 +1919,14 @@ html[dir="rtl"] .portfolio-section--spotlight .portfolio-header p {
 html[dir="rtl"] .portfolio-section--spotlight .p-text,
 html[dir="rtl"] .portfolio-section--spotlight .p-row.reverse .p-text {
   border:none !important}
+
+html[dir="rtl"] .portfolio-section--wwd .p-text {
+  border-left:none;
+  border-right:1px solid #d9e0e6}
+
+html[dir="rtl"] .portfolio-section--wwd .p-row.reverse .p-text {
+  border-right:none;
+  border-left:1px solid #d9e0e6}
 
 html[dir="rtl"] .sub-breadcrumb span {
   margin:0 8px}
