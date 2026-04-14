@@ -1265,20 +1265,20 @@ a.cta-banner-btn:hover {
   transform:translateY(-2px)}
 
 footer {
-  background:#414142;
-  color:rgba(255,255,255,.35)}
+  background:#eef1f4;
+  color:#64707d}
 
 .footer-top {
   display:grid;
   grid-template-columns:2fr 1fr 1fr 1fr;
   gap:48px;
-  border-bottom:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(36,51,66,.12);
   padding:64px 48px}
 
 .footer-brand .f-logo {
   font-size:18px;
   font-weight:900;
-  color:#fff;
+  color:#1f2a37;
   letter-spacing:2px;
   margin-bottom:16px}
 
@@ -1301,7 +1301,7 @@ footer {
   font-weight:700;
   letter-spacing:2px;
   text-transform:uppercase;
-  color:rgba(255,255,255,.5);
+  color:#4f5f6f;
   margin-bottom:20px}
 
 .footer-col ul {
@@ -1312,7 +1312,7 @@ footer {
 
 .footer-col ul li a {
   font-size:13px;
-  color:rgba(255,255,255,.3);
+  color:#5c6a79;
   transition:color .2s}
 
 .footer-col ul li a:hover {
@@ -1421,7 +1421,7 @@ a.nav-left {
   font-size:11px;
   font-weight:600;
   letter-spacing:3.5px;
-  color:rgba(255,255,255,.5);
+  color:#5f6c7a;
   margin-top:2px}
 
 .footer-contact-links {
@@ -1432,7 +1432,7 @@ a.nav-left {
 
 .footer-contact-links a {
   font-size:13px;
-  color:rgba(255,255,255,.4)}
+  color:#5f6c7a}
 
 .footer-contact-links a:hover {
   color:var(--teal)}
