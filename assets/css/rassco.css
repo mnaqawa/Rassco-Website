@@ -864,7 +864,8 @@ a.div-card--investment:focus-visible {
 .portfolio-section--wwd .p-row {
   min-height:340px;
   border-bottom:1px solid #d9e0e6;
-  background:#fff}
+  background:#fff;
+  align-items:stretch}
 
 .portfolio-section--wwd .p-img {
   min-height:340px}
@@ -875,7 +876,8 @@ a.div-card--investment:focus-visible {
 
 .portfolio-section--wwd .p-text {
   padding:46px 50px;
-  border-left:1px solid #d9e0e6}
+  border-left:1px solid #d9e0e6;
+  height:100%}
 
 .portfolio-section--wwd .p-row.reverse .p-text {
   border-left:none;
@@ -915,7 +917,8 @@ a.div-card--investment:focus-visible {
   color:#4f5f69}
 
 .portfolio-section--wwd .p-bullets {
-  margin-bottom:22px}
+  margin-bottom:22px;
+  min-height:96px}
 
 .portfolio-section--wwd .p-row:nth-of-type(2) .p-img-bg {
   background-position:center 42%}
@@ -931,7 +934,8 @@ a.div-card--investment:focus-visible {
 
 .portfolio-section--wwd .p-cta {
   color:var(--teal-d);
-  border-bottom:1px solid rgba(24,178,176,.28)}
+  border-bottom:1px solid rgba(24,178,176,.28);
+  margin-top:auto}
 
 .portfolio-section--wwd .p-cta:hover {
   color:var(--teal)}
@@ -1553,6 +1557,9 @@ a.cta-banner-btn {
   .portfolio-section--wwd .p-img {
     min-height:300px}
 
+  .portfolio-section--wwd .p-bullets {
+    min-height:0}
+
   .wwd-trust {
     margin:0 clamp(16px, 4vw, 32px) 48px}
 
@@ -2004,6 +2011,24 @@ html[dir="rtl"] .wwd-trust-list li {
 html[dir="rtl"] .wwd-trust-list li::before {
   left:auto;
   right:0}
+
+@media (max-width:600px) {
+  .portfolio-section--wwd .portfolio-header {
+    padding-top:44px}
+
+  .portfolio-section--wwd .p-text {
+    padding:28px 18px}
+
+  .portfolio-section--wwd .p-text h3 {
+    font-size:24px}
+
+  .portfolio-section--wwd .p-text p {
+    font-size:14px;
+    line-height:1.8}
+
+  .portfolio-section--wwd .p-img {
+    min-height:240px}
+}
 
 html[dir="rtl"] .sub-breadcrumb span {
   margin:0 8px}
