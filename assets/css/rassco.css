@@ -1273,7 +1273,7 @@ footer {
   grid-template-columns:2fr 1fr 1fr 1fr;
   gap:48px;
   border-bottom:1px solid rgba(36,51,66,.12);
-  padding:64px 48px}
+  padding:56px 48px 30px}
 
 .footer-brand .f-logo {
   font-size:18px;
@@ -1322,7 +1322,7 @@ footer {
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:20px 48px;
+  padding:14px 48px;
   font-size:12px}
 
 .footer-bottom span {
@@ -1401,10 +1401,19 @@ a.nav-left {
   display:flex;
   align-items:center;
   gap:12px;
+  position:relative;
   margin-bottom:16px}
 
-.footer-logo-mark-img {
+.footer-logo-row::before {
+  content:"";
   display:block;
+  height:clamp(36px, 6.5vw, 58px);
+  width:min(300px, 94vw);
+  background:url('../images/rassco-logo.png') left center/contain no-repeat;
+  flex-shrink:0}
+
+.footer-logo-mark-img {
+  display:none;
   height:clamp(36px, 6.5vw, 58px);
   width:auto;
   max-width:min(300px, 94vw);
@@ -1425,7 +1434,7 @@ a.nav-left {
   margin-top:2px}
 
 .footer-contact-links {
-  margin-top:20px;
+  margin-top:12px;
   display:flex;
   flex-direction:column;
   gap:8px}
