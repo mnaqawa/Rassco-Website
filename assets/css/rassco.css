@@ -781,6 +781,70 @@ a.div-card--investment:focus-visible {
 .p-cta:hover {
   color:#00e5e5}
 
+.portfolio-section--spotlight {
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 420px at 8% 18%, rgba(24,178,176,.2), transparent 60%),
+    radial-gradient(800px 360px at 92% 82%, rgba(46,116,183,.16), transparent 62%),
+    linear-gradient(145deg, #132128 0%, #0f1a1f 45%, #121f25 100%)}
+
+.portfolio-section--spotlight .portfolio-header {
+  padding-bottom:28px;
+  border-bottom:none}
+
+.portfolio-section--spotlight .portfolio-header p {
+  max-width:640px;
+  color:rgba(230,244,247,.82);
+  text-align:left}
+
+.portfolio-section--spotlight .p-row {
+  margin:0 48px 72px;
+  border:1px solid rgba(170,224,232,.22);
+  border-radius:22px;
+  overflow:hidden;
+  background:linear-gradient(150deg, rgba(17,39,48,.82), rgba(14,33,41,.92));
+  box-shadow:0 24px 48px rgba(4,16,21,.34);
+  grid-template-columns:54% 46%;
+  min-height:420px}
+
+.portfolio-section--spotlight .p-img {
+  min-height:420px}
+
+.portfolio-section--spotlight .p-img::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, rgba(14,38,47,.42), rgba(24,178,176,.08))}
+
+.portfolio-section--spotlight .p-img-bg {
+  filter:brightness(.92) saturate(1.05)}
+
+.portfolio-section--spotlight .p-text {
+  border:none;
+  padding:56px 56px 60px}
+
+.portfolio-section--spotlight .p-text p {
+  color:rgba(232,246,250,.82);
+  font-size:14px;
+  line-height:1.95;
+  margin-bottom:16px}
+
+.portfolio-section--spotlight .p-text .p-cta {
+  margin-top:8px;
+  border:none;
+  border-radius:999px;
+  padding:12px 22px;
+  background:var(--teal);
+  color:#fff;
+  font-size:12px;
+  letter-spacing:.4px;
+  box-shadow:0 10px 22px rgba(24,178,176,.28)}
+
+.portfolio-section--spotlight .p-text .p-cta:hover {
+  color:#fff;
+  background:var(--teal-d)}
+
 .clients-page-intro {
   max-width:720px;
   margin:0 auto;
@@ -1338,6 +1402,17 @@ a.cta-banner-btn {
   .p-img {
     min-height:220px}
 
+  .portfolio-section--spotlight .p-row {
+    margin:0 clamp(16px, 4vw, 32px) 48px;
+    grid-template-columns:1fr;
+    min-height:0}
+
+  .portfolio-section--spotlight .p-img {
+    min-height:300px}
+
+  .portfolio-section--spotlight .p-text {
+    padding:32px clamp(18px, 4vw, 30px) 36px}
+
   .footer-top {
     grid-template-columns:1fr 1fr;
     padding:48px clamp(20px, 4vw, 48px)}
@@ -1756,6 +1831,13 @@ html[dir="rtl"] .p-text {
 html[dir="rtl"] .p-row.reverse .p-text {
   border-right:none !important;
   border-left:1px solid rgba(255,255,255,.07)}
+
+html[dir="rtl"] .portfolio-section--spotlight .portfolio-header p {
+  text-align:right}
+
+html[dir="rtl"] .portfolio-section--spotlight .p-text,
+html[dir="rtl"] .portfolio-section--spotlight .p-row.reverse .p-text {
+  border:none !important}
 
 html[dir="rtl"] .sub-breadcrumb span {
   margin:0 8px}
