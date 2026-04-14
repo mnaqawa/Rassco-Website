@@ -1041,6 +1041,34 @@ a.div-card--investment:focus-visible {
   font-weight:700;
   color:var(--dark)}
 
+/* Icon-only LinkedIn CTA on clients page */
+.clients-page-cta[href*="linkedin.com/company/rassaudi"] {
+  width:44px;
+  height:44px;
+  border:1px solid rgba(0,140,160,.35);
+  border-radius:10px;
+  background:#fff;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,.08)}
+
+.clients-page-cta[href*="linkedin.com/company/rassaudi"] .clients-page-cta-label,
+.clients-page-cta[href*="linkedin.com/company/rassaudi"] .clients-page-cta-value {
+  display:none}
+
+.clients-page-cta[href*="linkedin.com/company/rassaudi"]::before {
+  content:"in";
+  font-size:22px;
+  font-weight:900;
+  line-height:1;
+  color:#0a66c2;
+  font-family:Arial, sans-serif}
+
+.clients-page-cta[href*="linkedin.com/company/rassaudi"]:hover {
+  transform:translateY(-1px);
+  border-color:#0a66c2}
+
 .clients-section {
   position:relative;
   padding:80px 48px;
@@ -1446,6 +1474,28 @@ a.nav-left {
 
 .footer-contact-links a:hover {
   color:var(--teal)}
+
+/* Icon-only LinkedIn link in footer */
+.footer-contact-links a[href*="linkedin.com/company/rassaudi"] {
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  border:1px solid rgba(0,140,160,.32);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0;
+  line-height:0;
+  color:transparent;
+  background:#fff}
+
+.footer-contact-links a[href*="linkedin.com/company/rassaudi"]::before {
+  content:"in";
+  font-size:18px;
+  font-weight:900;
+  line-height:1;
+  color:#0a66c2;
+  font-family:Arial, sans-serif}
 
 .nav-contact-link {
   font-size:12px;
