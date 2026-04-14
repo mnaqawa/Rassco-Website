@@ -1488,6 +1488,7 @@ a.nav-left {
   height:30px;
   border-radius:50%;
   border:1px solid rgba(0,140,160,.22);
+  margin-inline-start:8px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
