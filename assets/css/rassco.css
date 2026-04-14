@@ -845,6 +845,47 @@ a.div-card--investment:focus-visible {
   color:#fff;
   background:var(--teal-d)}
 
+/* What We Deliver page visual balancing */
+.portfolio-section--wwd {
+  background:var(--dark)}
+
+.portfolio-section--wwd .portfolio-header p {
+  max-width:520px}
+
+.portfolio-section--wwd .p-row {
+  min-height:340px}
+
+.portfolio-section--wwd .p-img {
+  min-height:340px}
+
+.portfolio-section--wwd .p-img-bg {
+  background-position:center center;
+  filter:brightness(.84) saturate(1.02)}
+
+.portfolio-section--wwd .p-text {
+  padding:46px 50px}
+
+.portfolio-section--wwd .p-text h3 {
+  margin-bottom:14px}
+
+.portfolio-section--wwd .p-text p {
+  margin-bottom:18px}
+
+.portfolio-section--wwd .p-bullets {
+  margin-bottom:22px}
+
+.portfolio-section--wwd .p-row:nth-of-type(2) .p-img-bg {
+  background-position:center 42%}
+
+.portfolio-section--wwd .p-row:nth-of-type(3) .p-img-bg {
+  background-position:center 45%}
+
+.portfolio-section--wwd .p-row:nth-of-type(4) .p-img-bg {
+  background-position:center 40%}
+
+.portfolio-section--wwd .p-row:nth-of-type(8) .p-img-bg {
+  background-position:center 38%}
+
 .clients-page-intro {
   max-width:720px;
   margin:0 auto;
@@ -1412,6 +1453,13 @@ a.cta-banner-btn {
 
   .portfolio-section--spotlight .p-text {
     padding:32px clamp(18px, 4vw, 30px) 36px}
+
+  .portfolio-section--wwd .p-text {
+    padding:34px clamp(18px, 4vw, 30px)}
+
+  .portfolio-section--wwd .p-row,
+  .portfolio-section--wwd .p-img {
+    min-height:300px}
 
   .footer-top {
     grid-template-columns:1fr 1fr;
