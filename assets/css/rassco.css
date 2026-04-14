@@ -1409,7 +1409,8 @@ a.nav-left {
   display:block;
   height:clamp(36px, 6.5vw, 58px);
   width:min(300px, 94vw);
-  background:url('../images/rassco-logo.svg') left center/contain no-repeat;
+  background:url('../images/rassco-logo.png') left center/contain no-repeat;
+  mix-blend-mode:multiply;
   flex-shrink:0}
 
 .footer-logo-mark-img {
