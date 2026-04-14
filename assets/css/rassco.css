@@ -1044,10 +1044,14 @@ a.div-card--investment:focus-visible {
 /* Icon-only LinkedIn CTA on clients page */
 .clients-page-cta[href*="linkedin.com/company/rassaudi"] {
   width:42px;
+  height:42px;
+  border:1px solid rgba(0,140,160,.22);
+  border-radius:50%;
+  background:rgba(0,140,160,.08);
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 6px 16px rgba(0,0,0,.08)}
+  box-shadow:0 4px 12px rgba(0,0,0,.06)}
 
 .clients-page-cta[href*="linkedin.com/company/rassaudi"] .clients-page-cta-label,
 .clients-page-cta[href*="linkedin.com/company/rassaudi"] .clients-page-cta-value {
@@ -1055,10 +1059,10 @@ a.div-card--investment:focus-visible {
 
 .clients-page-cta[href*="linkedin.com/company/rassaudi"]::before {
   content:"in";
-  font-size:22px;
-  font-weight:900;
+  font-size:20px;
+  font-weight:800;
   line-height:1;
-  color:#0a66c2;
+  color:var(--teal);
   font-family:Arial, sans-serif}
 
 .clients-page-cta[href*="linkedin.com/company/rassaudi"]:hover {
