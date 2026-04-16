@@ -1735,22 +1735,21 @@ body.sector-theme--investment {
 
 .sector-hero {
   position:relative;
-  min-height:min(340px, 46vw);
+  min-height:min(380px, 50vw);
   display:flex;
   align-items:flex-end;
   padding:48px clamp(20px, 4vw, 48px);
   margin-bottom:0;
-  background-size:contain;
+  background-size:cover;
   background-repeat:no-repeat;
-  background-position:center center;
-  background-color:#d7dee6;
+  background-position:center 36%;
   border-bottom:3px solid var(--sector-accent, var(--teal))}
 
 .sector-hero::after {
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(0deg,rgba(20,30,44,.42) 0%,rgba(20,30,44,.08) 62%,rgba(20,30,44,.02) 100%);
+  background:linear-gradient(0deg,rgba(20,30,44,.46) 0%,rgba(20,30,44,.1) 58%,rgba(20,30,44,.03) 100%);
   z-index:0}
 
 .sector-hero-inner {
