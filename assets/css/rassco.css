@@ -445,6 +445,14 @@ a {
   justify-content:space-between;
   border-bottom:1px solid var(--border)}
 
+.divisions-header--center {
+  justify-content:center;
+  text-align:center;
+  align-items:center}
+
+.divisions-header--center .divisions-header-left {
+  text-align:center}
+
 .divisions-header-left h2 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
   font-size:40px;
@@ -664,6 +672,14 @@ a.div-card--investment:focus-visible {
   display:flex;
   align-items:flex-end;
   justify-content:space-between}
+
+.portfolio-section--spotlight .portfolio-header--center {
+  justify-content:center;
+  align-items:center;
+  text-align:center}
+
+.portfolio-section--spotlight .portfolio-header--center > div {
+  width:100%}
 
 .portfolio-header h2 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
