@@ -260,10 +260,15 @@ a {
   letter-spacing:2.1px;
   text-transform:uppercase;
   color:var(--teal);
-  margin:0 0 16px 12px}
+  margin:0 0 16px 88px}
 
 .hero-kicker::before {
   content:none}
+
+@media (max-width:900px) {
+  .hero-kicker {
+    margin-left:36px}
+}
 
 .hero-main--brand .hero-main-content h1 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
