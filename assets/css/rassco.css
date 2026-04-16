@@ -249,6 +249,7 @@ a {
   right:0;
   z-index:2;
   padding:44px clamp(32px, 6vw, 96px) 40px;
+  padding-inline-start:calc(clamp(32px, 6vw, 96px) + 56px);
   max-width:1200px}
 
 .hero-kicker {
@@ -260,14 +261,15 @@ a {
   letter-spacing:2.1px;
   text-transform:uppercase;
   color:var(--teal);
-  margin:0 0 16px 88px}
+  margin:0 0 16px;
+  margin-inline-start:100px}
 
 .hero-kicker::before {
   content:none}
 
 @media (max-width:900px) {
   .hero-kicker {
-    margin-left:36px}
+    margin-inline-start:44px}
 }
 
 .hero-main--brand .hero-main-content h1 {
@@ -368,7 +370,7 @@ a {
 .section-label {
   display:inline-flex;
   align-items:center;
-  gap:8px;
+  gap:0;
   font-size:10px;
   font-weight:700;
   letter-spacing:2.5px;
@@ -377,10 +379,7 @@ a {
   margin-bottom:20px}
 
 .section-label::before {
-  content:'';
-  width:20px;
-  height:2px;
-  background:var(--teal)}
+  content:none}
 
 .wwa-left h2 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
@@ -1415,7 +1414,7 @@ a.nav-left {
   color:rgba(0,180,180,.8)}
 
 .section-label--on-dark::before {
-  background:rgba(0,180,180,.8)}
+  content:none}
 
 .portfolio-title {
   color:#fff}
@@ -1575,7 +1574,8 @@ a.cta-banner-btn {
     min-height:min(440px, 65vh)}
 
   .hero-main-content {
-    padding:32px clamp(20px, 4vw, 44px) 28px}
+    padding:32px clamp(20px, 4vw, 44px) 28px;
+    padding-inline-start:calc(clamp(20px, 4vw, 44px) + 28px)}
 
   .hero-main--brand .hero-main-content h1 {
     font-size:clamp(28px, 8vw, 44px)}
