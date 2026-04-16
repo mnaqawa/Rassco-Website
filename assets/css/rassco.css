@@ -2109,6 +2109,22 @@ html[dir="rtl"] .wwd-trust-list li::before {
   right:0}
 
 @media (max-width:600px) {
+  /* Mobile homepage alignment reset (EN + AR) */
+  .nav-left {
+    margin-inline-start:16px}
+
+  .hero-main-content {
+    padding-inline-start:clamp(20px, 4vw, 44px)}
+
+  .hero-kicker {
+    margin-inline-start:0}
+
+  .wwa-left {
+    padding-inline-start:clamp(20px, 4vw, 48px)}
+
+  .cta-banner {
+    padding-inline-start:clamp(20px, 4vw, 48px)}
+
   .portfolio-section--wwd .portfolio-header {
     padding-top:44px}
 
