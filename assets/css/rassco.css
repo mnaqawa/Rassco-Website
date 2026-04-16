@@ -2014,7 +2014,7 @@ a.sector-service-card:hover {
 
 .market-driver-list li {
   display:grid;
-  grid-template-columns:36px 1fr;
+  grid-template-columns:54px 1fr;
   gap:14px;
   align-items:flex-start;
   padding:12px 14px;
@@ -2023,20 +2023,20 @@ a.sector-service-card:hover {
   background:#fff}
 
 .market-driver-icon {
-  width:36px;
-  height:36px;
-  border-radius:8px;
+  width:54px;
+  height:54px;
+  border-radius:0;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  background:var(--teal-l);
+  background:transparent;
   color:var(--teal)}
 
 .market-driver-icon svg {
-  width:19px;
-  height:19px;
+  width:34px;
+  height:34px;
   stroke:currentColor;
-  stroke-width:1.9;
+  stroke-width:1.7;
   fill:none;
   stroke-linecap:round;
   stroke-linejoin:round}
