@@ -114,7 +114,13 @@ a {
   display:flex;
   align-items:center;
   gap:14px;
-  flex-shrink:0}
+  flex-shrink:0;
+  margin-inline-start:56px}
+
+@media (max-width:900px) {
+  .nav-left {
+    margin-inline-start:28px}
+}
 
 .nav-logo-full {
   display:block;
