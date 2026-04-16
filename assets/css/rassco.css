@@ -546,16 +546,16 @@ a.div-card--investment:focus-visible {
   background-size:cover;
   background-position:center;
   transition:transform 6s ease;
-  filter:brightness(.75)}
+  filter:brightness(.9) contrast(1.05)}
 
 .div-card:hover .div-bg {
   transform:scale(1.06);
-  filter:brightness(.6)}
+  filter:brightness(.8) contrast(1.05)}
 
 .div-overlay {
   position:absolute;
   inset:0;
-  background:linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.3) 50%,rgba(0,0,0,.1) 100%)}
+  background:linear-gradient(0deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.24) 52%,rgba(0,0,0,.06) 100%)}
 
 .div-number {
   position:absolute;
@@ -1741,14 +1741,14 @@ body.sector-theme--investment {
   padding:48px clamp(20px, 4vw, 48px);
   margin-bottom:0;
   background-size:cover;
-  background-position:center;
+  background-position:center 42%;
   border-bottom:3px solid var(--sector-accent, var(--teal))}
 
 .sector-hero::after {
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(0deg,rgba(26,35,50,.92) 0%,rgba(26,35,50,.45) 100%);
+  background:linear-gradient(0deg,rgba(26,35,50,.74) 0%,rgba(26,35,50,.28) 100%);
   z-index:0}
 
 .sector-hero-inner {
