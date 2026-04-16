@@ -371,7 +371,7 @@ a {
 
 .wwa-left {
   padding:80px 64px 80px 48px;
-  padding-inline-start:calc(48px + 56px);
+  padding-inline-start:calc(48px + 72px);
   border-right:1px solid var(--border)}
 
 .section-label {
@@ -1273,7 +1273,8 @@ a.div-card--investment:focus-visible {
   grid-template-columns:1fr auto;
   align-items:center;
   gap:40px;
-  padding:64px 48px}
+  padding:64px 48px;
+  padding-inline-start:calc(48px + 72px)}
 
 .cta-banner h2 {
   font-family:'Montserrat','Noto Kufi Arabic','Segoe UI',sans-serif;
@@ -1609,7 +1610,7 @@ a.cta-banner-btn {
   .wwa-left {
     border-right:none;
     padding:56px clamp(20px, 4vw, 48px);
-    padding-inline-start:calc(clamp(20px, 4vw, 48px) + 28px)}
+    padding-inline-start:calc(clamp(20px, 4vw, 48px) + 36px)}
 
   .wwa-right {
     padding:56px clamp(20px, 4vw, 48px)}
@@ -1689,7 +1690,8 @@ a.cta-banner-btn {
   .cta-banner {
     grid-template-columns:1fr;
     gap:24px;
-    padding:48px clamp(20px, 4vw, 48px)}
+    padding:48px clamp(20px, 4vw, 48px);
+    padding-inline-start:calc(clamp(20px, 4vw, 48px) + 36px)}
 
   .portfolio-header {
     flex-direction:column;
