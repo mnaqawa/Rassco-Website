@@ -115,11 +115,11 @@ a {
   align-items:center;
   gap:14px;
   flex-shrink:0;
-  margin-inline-start:56px}
+  margin-inline-start:90px}
 
 @media (max-width:900px) {
   .nav-left {
-    margin-inline-start:28px}
+    margin-inline-start:42px}
 }
 
 .nav-logo-full {
