@@ -374,9 +374,6 @@ a {
   padding-inline-start:calc(48px + 72px);
   border-right:1px solid var(--border)}
 
-.wwa-left .section-label {
-  margin-inline-start:100px}
-
 .section-label {
   display:inline-flex;
   align-items:center;
@@ -1614,9 +1611,6 @@ a.cta-banner-btn {
     border-right:none;
     padding:56px clamp(20px, 4vw, 48px);
     padding-inline-start:calc(clamp(20px, 4vw, 48px) + 36px)}
-
-  .wwa-left .section-label {
-    margin-inline-start:44px}
 
   .wwa-right {
     padding:56px clamp(20px, 4vw, 48px)}
