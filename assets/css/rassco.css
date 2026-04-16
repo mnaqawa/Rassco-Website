@@ -2069,6 +2069,16 @@ html[dir="rtl"] .footer-top,
 html[dir="rtl"] .footer-bottom {
   text-align:right}
 
+/* RTL: allow explicitly centered headers to remain centered */
+html[dir="rtl"] .divisions-header--center,
+html[dir="rtl"] .divisions-header--center .divisions-header-left,
+html[dir="rtl"] .portfolio-header--center,
+html[dir="rtl"] .portfolio-header--center > div {
+  text-align:center}
+
+html[dir="rtl"] .portfolio-section--spotlight .portfolio-header--center p {
+  text-align:center}
+
 html[dir="rtl"] .wwa-left {
   border-right:none;
   border-left:1px solid var(--border)}
