@@ -2086,6 +2086,10 @@ html[dir="rtl"] .footer-top,
 html[dir="rtl"] .footer-bottom {
   text-align:right}
 
+html[dir="rtl"] .hero-main--brand .hero-main-img {
+  background-image:url('../images/hero-home-ar.png');
+  background-position:center center}
+
 /* RTL: allow explicitly centered headers to remain centered */
 html[dir="rtl"] .divisions-header--center,
 html[dir="rtl"] .divisions-header--center .divisions-header-left,
