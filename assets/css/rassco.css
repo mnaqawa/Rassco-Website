@@ -1784,6 +1784,7 @@ body.sector-theme--investment {
   z-index:2;
   max-width:960px;
   margin:0 auto;
+  transform:translateY(-52px);
   width:100%}
 
 .sector-hero-kicker {
@@ -1804,7 +1805,6 @@ body.sector-theme--investment {
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  transform:translateY(-52px);
   padding:0;
   background:transparent;
   border-radius:0;
