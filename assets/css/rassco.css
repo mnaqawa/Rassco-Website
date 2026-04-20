@@ -356,6 +356,11 @@ a {
   color:#fff;
   line-height:1}
 
+.stat-num--country {
+  font-size:15px;
+  line-height:1.15;
+  white-space:nowrap}
+
 .stat-lbl {
   font-size:9px;
   font-weight:600;
