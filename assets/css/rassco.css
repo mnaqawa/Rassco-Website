@@ -2033,7 +2033,7 @@ a.sector-service-card:hover {
   display:grid;
   grid-template-columns:54px 1fr;
   gap:14px;
-  align-items:flex-start;
+  align-items:center;
   padding:12px 14px;
   border:1px solid var(--border);
   border-radius:8px;
