@@ -989,21 +989,32 @@ a.div-card--investment:focus-visible {
   margin-top:14px}
 
 .wwd-trust-list li {
-  position:relative;
-  padding-left:14px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
   color:#2f3f48;
   font-size:13px;
   font-weight:600}
 
 .wwd-trust-list li::before {
-  content:'';
-  position:absolute;
-  left:0;
-  top:.55em;
-  width:6px;
-  height:6px;
-  border-radius:50%;
-  background:var(--teal)}
+  content:none}
+
+.wwd-trust-icon {
+  width:20px;
+  height:20px;
+  min-width:20px;
+  border-radius:6px;
+  background:rgba(24,178,176,.12);
+  color:var(--teal);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:1px}
+
+.wwd-trust-icon svg {
+  width:13px;
+  height:13px;
+  fill:currentColor}
 
 .clients-page-intro {
   max-width:720px;
@@ -2112,12 +2123,7 @@ html[dir="rtl"] .portfolio-section--wwd .p-brand {
   letter-spacing:0}
 
 html[dir="rtl"] .wwd-trust-list li {
-  padding-left:0;
-  padding-right:14px}
-
-html[dir="rtl"] .wwd-trust-list li::before {
-  left:auto;
-  right:0}
+  flex-direction:row-reverse}
 
 @media (max-width:600px) {
   /* Mobile homepage alignment reset (EN + AR) */
