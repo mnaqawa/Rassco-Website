@@ -1000,9 +1000,9 @@ a.div-card--investment:focus-visible {
   content:none}
 
 .wwd-trust-icon {
-  width:20px;
-  height:20px;
-  min-width:20px;
+  width:26px;
+  height:26px;
+  min-width:26px;
   border-radius:6px;
   background:rgba(24,178,176,.12);
   color:var(--teal);
@@ -1012,8 +1012,8 @@ a.div-card--investment:focus-visible {
   margin-top:1px}
 
 .wwd-trust-icon svg {
-  width:13px;
-  height:13px;
+  width:17px;
+  height:17px;
   fill:currentColor}
 
 .clients-page-intro {
