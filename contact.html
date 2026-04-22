@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Contact RASSCO Group"/>
+<title>Contact Us - RASSCO Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/rassco.css"/>
+</head>
+<body class="contact-template-page">
+  <a class="skip-link" href="#contact-form">Skip to form</a>
+  <h1 class="contact-template-title">Get in touch</h1>
+  <p class="contact-template-note">Fill in your details and submit. Your message will be sent to info@rassco.com.</p>
+  <div id="contact-success" class="contact-template-success" hidden>Thank you. Your message has been sent successfully.</div>
+
+  <div class="contact-template-wrap">
+    <form id="contact-form" class="contact-template-form" method="POST" action="https://formsubmit.co/info@rassco.com">
+      <input type="hidden" name="_subject" value="Website Contact Form Submission"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="_next" value="/contact.html?submitted=1"/>
+
+      <div class="contact-template-labels" aria-hidden="true">
+        <div>Your Name</div>
+        <div>Phone Number*</div>
+        <div>Your Email*</div>
+        <div>Your Company</div>
+        <div>Subject*</div>
+        <div>Question / Required Service*</div>
+        <img class="contact-template-logo" src="assets/images/rassco-logo.png" alt="RASSCO Group"/>
+      </div>
+
+      <div class="contact-template-fields">
+        <input class="contact-template-input" type="text" name="name" aria-label="Your Name"/>
+        <input class="contact-template-input" type="tel" name="phone" required aria-label="Phone Number"/>
+        <input class="contact-template-input" type="email" name="email" required aria-label="Your Email"/>
+        <input class="contact-template-input" type="text" name="company" aria-label="Your Company"/>
+        <input class="contact-template-input" type="text" name="subject" required aria-label="Subject"/>
+        <textarea class="contact-template-textarea" name="message" required aria-label="Question or Required Service"></textarea>
+        <button class="contact-template-submit" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var success = document.getElementById("contact-success");
+      if (params.get("submitted") === "1") {
+        success.hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>

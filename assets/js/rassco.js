@@ -19,6 +19,22 @@
   });
 })();
 
+(function redirectGetInTouchLinks() {
+  var isArabicPage = document.documentElement.getAttribute("lang") === "ar";
+  var contactPageUrl = isArabicPage ? "/ar/contact.html" : "/contact.html";
+  var selectors = [
+    ".nav-btn[href^='mailto:info@rassco.com']",
+    ".hero-cta[href^='mailto:info@rassco.com']",
+    ".cta-banner-btn[href^='mailto:info@rassco.com']"
+  ];
+  var links = document.querySelectorAll(selectors.join(","));
+  if (!links.length) return;
+
+  links.forEach(function (link) {
+    link.setAttribute("href", contactPageUrl);
+  });
+})();
+
 /* Paths relative to site root; matches ClientLogos/ in repo (spaces in filenames).
    Re-order this list to show priority clients first in the marquee. PNG + .webp (same base name). */
 var RASSCO_CLIENT_LOGOS = [

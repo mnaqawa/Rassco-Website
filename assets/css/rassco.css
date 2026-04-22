@@ -2218,3 +2218,110 @@ html[dir="rtl"] .footer-col ul {
   html {
     scroll-behavior:auto}
 }
+
+/* —— Contact page —— */
+.contact-template-page {
+  background:#ccefef;
+  min-height:100vh;
+  padding:clamp(20px, 4vw, 40px)}
+
+.contact-template-wrap {
+  max-width:980px;
+  margin:0 auto;
+  background:#ccefef}
+
+.contact-template-form {
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:24px;
+  align-items:start;
+  padding:24px}
+
+.contact-template-labels {
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  color:#1f2a37;
+  font-weight:600;
+  font-size:20px;
+  line-height:1.1}
+
+.contact-template-logo {
+  width:150px;
+  margin-top:8px}
+
+.contact-template-fields {
+  display:flex;
+  flex-direction:column;
+  gap:14px}
+
+.contact-template-input,
+.contact-template-textarea {
+  width:100%;
+  border:none;
+  border-radius:10px;
+  background:#f7f7f7;
+  color:#1f2a37;
+  font-size:16px;
+  font-family:inherit;
+  padding:12px 14px}
+
+.contact-template-input:focus,
+.contact-template-textarea:focus {
+  outline:2px solid #18b2b0;
+  outline-offset:1px}
+
+.contact-template-textarea {
+  min-height:160px;
+  resize:vertical}
+
+.contact-template-submit {
+  width:fit-content;
+  border:none;
+  border-radius:8px;
+  background:#18b2b0;
+  color:#fff;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+  padding:12px 28px;
+  cursor:pointer;
+  transition:background .2s}
+
+.contact-template-submit:hover {
+  background:#0e8e8c}
+
+.contact-template-title {
+  max-width:980px;
+  margin:0 auto 8px;
+  color:#1f2a37;
+  font-size:30px;
+  font-weight:800}
+
+.contact-template-note {
+  max-width:980px;
+  margin:0 auto 18px;
+  color:#345;
+  font-size:14px}
+
+.contact-template-success {
+  max-width:980px;
+  margin:0 auto 16px;
+  background:#e6fff4;
+  border:1px solid #9adfbf;
+  color:#1d5c3f;
+  border-radius:8px;
+  padding:10px 12px;
+  font-size:14px}
+
+@media (max-width:800px) {
+  .contact-template-form {
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:16px}
+
+  .contact-template-labels {
+    font-size:18px;
+    gap:12px}
+}
