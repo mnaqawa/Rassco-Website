@@ -2237,16 +2237,16 @@ html.imissive-theme,
 html.imissive-theme body {
   background:#eceaed !important}
 
-.contact-template-wrap--imissive,
-.contact-template-form--imissive {
-  background:#eceaed !important}
-
 .contact-template-form {
   display:flex;
   flex-direction:column;
   gap:14px;
   padding:24px;
   background:#ccefef !important}
+
+.contact-template-wrap.contact-template-wrap--imissive,
+.contact-template-form.contact-template-form--imissive {
+  background:#eceaed !important}
 
 .contact-template-row {
   display:grid;
