@@ -23,24 +23,43 @@
       <input type="hidden" name="_captcha" value="false"/>
       <input type="hidden" name="_next" value="/contact.html?submitted=1"/>
 
-      <div class="contact-template-labels" aria-hidden="true">
-        <div>Your Name</div>
-        <div>Phone Number*</div>
-        <div>Your Email*</div>
-        <div>Your Company</div>
-        <div>Subject*</div>
-        <div>Question / Required Service*</div>
-        <img class="contact-template-logo" src="assets/images/rassco-logo.png" alt="RASSCO Group"/>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-name">Your Name</label>
+        <input id="contact-name" class="contact-template-input" type="text" name="name" autocomplete="name"/>
       </div>
 
-      <div class="contact-template-fields">
-        <input class="contact-template-input" type="text" name="name" aria-label="Your Name"/>
-        <input class="contact-template-input" type="tel" name="phone" required aria-label="Phone Number"/>
-        <input class="contact-template-input" type="email" name="email" required aria-label="Your Email"/>
-        <input class="contact-template-input" type="text" name="company" aria-label="Your Company"/>
-        <input class="contact-template-input" type="text" name="subject" required aria-label="Subject"/>
-        <textarea class="contact-template-textarea" name="message" required aria-label="Question or Required Service"></textarea>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-phone">Phone Number*</label>
+        <input id="contact-phone" class="contact-template-input" type="tel" name="phone" required inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" autocomplete="tel" title="Please enter numbers only (7 to 15 digits)."/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-email">Your Email*</label>
+        <input id="contact-email" class="contact-template-input" type="email" name="email" required autocomplete="email" title="Please enter a valid email address."/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-company">Your Company</label>
+        <input id="contact-company" class="contact-template-input" type="text" name="company" autocomplete="organization"/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-subject">Subject*</label>
+        <input id="contact-subject" class="contact-template-input" type="text" name="subject" required/>
+      </div>
+
+      <div class="contact-template-row contact-template-row--message">
+        <label class="contact-template-label" for="contact-message">Question / Required Service*</label>
+        <textarea id="contact-message" class="contact-template-textarea" name="message" required></textarea>
+      </div>
+
+      <div class="contact-template-row contact-template-row--logo">
+        <div class="contact-template-logo-cell">
+          <img class="contact-template-logo" src="assets/images/rassco-logo.png" alt="RASSCO Group"/>
+        </div>
+        <div class="contact-template-action-cell">
         <button class="contact-template-submit" type="submit">Submit</button>
+        </div>
       </div>
     </form>
   </div>

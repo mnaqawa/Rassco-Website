@@ -23,24 +23,43 @@
       <input type="hidden" name="_captcha" value="false"/>
       <input type="hidden" name="_next" value="https://www.rassco.com/ar/contact.html?submitted=1"/>
 
-      <div class="contact-template-labels" aria-hidden="true">
-        <div>الاسم</div>
-        <div>* رقم الهاتف</div>
-        <div>* البريد الإلكتروني</div>
-        <div>اسم الشركة</div>
-        <div>* الموضوع</div>
-        <div>* السؤال / الخدمة المطلوبة</div>
-        <img class="contact-template-logo" src="../assets/images/rassco-logo.png" alt="مجموعة راسكو"/>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-name">الاسم</label>
+        <input id="contact-name" class="contact-template-input" type="text" name="name" autocomplete="name"/>
       </div>
 
-      <div class="contact-template-fields">
-        <input class="contact-template-input" type="text" name="name" aria-label="الاسم"/>
-        <input class="contact-template-input" type="tel" name="phone" required aria-label="رقم الهاتف"/>
-        <input class="contact-template-input" type="email" name="email" required aria-label="البريد الإلكتروني"/>
-        <input class="contact-template-input" type="text" name="company" aria-label="اسم الشركة"/>
-        <input class="contact-template-input" type="text" name="subject" required aria-label="الموضوع"/>
-        <textarea class="contact-template-textarea" name="message" required aria-label="السؤال أو الخدمة المطلوبة"></textarea>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-phone">رقم الهاتف*</label>
+        <input id="contact-phone" class="contact-template-input" type="tel" name="phone" required inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" autocomplete="tel" title="يرجى إدخال أرقام فقط (من 7 إلى 15 رقم)."/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-email">البريد الإلكتروني*</label>
+        <input id="contact-email" class="contact-template-input" type="email" name="email" required autocomplete="email" title="يرجى إدخال بريد إلكتروني صحيح."/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-company">اسم الشركة</label>
+        <input id="contact-company" class="contact-template-input" type="text" name="company" autocomplete="organization"/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="contact-subject">الموضوع*</label>
+        <input id="contact-subject" class="contact-template-input" type="text" name="subject" required/>
+      </div>
+
+      <div class="contact-template-row contact-template-row--message">
+        <label class="contact-template-label" for="contact-message">السؤال / الخدمة المطلوبة*</label>
+        <textarea id="contact-message" class="contact-template-textarea" name="message" required></textarea>
+      </div>
+
+      <div class="contact-template-row contact-template-row--logo">
+        <div class="contact-template-logo-cell">
+          <img class="contact-template-logo" src="../assets/images/rassco-logo.png" alt="مجموعة راسكو"/>
+        </div>
+        <div class="contact-template-action-cell">
         <button class="contact-template-submit" type="submit">إرسال</button>
+        </div>
       </div>
     </form>
   </div>
