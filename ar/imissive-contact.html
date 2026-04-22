@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="طلب عرض خدمة التواصل السحابي من iMissive"/>
+<title>طلب الخدمة - iMissive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/css/rassco.css"/>
+</head>
+<body class="contact-template-page contact-template-page--imissive">
+  <a class="skip-link" href="#imissive-form">تخطي إلى النموذج</a>
+  <h1 class="contact-template-title">طلب الخدمة</h1>
+  <p class="contact-template-note">يرجى تعبئة البيانات ثم الضغط على إرسال. ستصل رسالتك إلى info@imissive.com.</p>
+  <div id="imissive-status" class="contact-template-success" hidden></div>
+
+  <div class="contact-template-wrap contact-template-wrap--imissive">
+    <form id="imissive-form" class="contact-template-form contact-template-form--imissive" method="POST" action="https://formsubmit.co/info@imissive.com">
+      <input type="hidden" name="_subject" value="Arabic iMissive Service Brief Request"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_captcha" value="false"/>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="imissive-name">الاسم</label>
+        <input id="imissive-name" class="contact-template-input" type="text" name="name" autocomplete="name"/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="imissive-phone">رقم الهاتف*</label>
+        <input id="imissive-phone" class="contact-template-input" type="tel" name="phone" required inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" autocomplete="tel" title="يرجى إدخال أرقام فقط (من 7 إلى 15 رقم)."/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="imissive-email">البريد الإلكتروني*</label>
+        <input id="imissive-email" class="contact-template-input" type="email" name="email" required autocomplete="email" title="يرجى إدخال بريد إلكتروني صحيح."/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="imissive-company">اسم الشركة</label>
+        <input id="imissive-company" class="contact-template-input" type="text" name="company" autocomplete="organization"/>
+      </div>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="imissive-subject">الموضوع*</label>
+        <input id="imissive-subject" class="contact-template-input" type="text" name="subject" required value="طلب خدمة التواصل السحابي"/>
+      </div>
+
+      <div class="contact-template-row contact-template-row--message">
+        <label class="contact-template-label" for="imissive-message">السؤال / الخدمة المطلوبة*</label>
+        <textarea id="imissive-message" class="contact-template-textarea" name="message" required></textarea>
+      </div>
+
+      <div class="contact-template-row contact-template-row--logo">
+        <div class="contact-template-logo-cell">
+          <img class="contact-template-logo contact-template-logo--imissive" src="../assets/images/logo-imissive.png" alt="iMissive"/>
+        </div>
+        <div class="contact-template-action-cell">
+          <button class="contact-template-submit" type="submit">إرسال</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="imissive-modal" class="contact-modal" hidden>
+    <div class="contact-modal-backdrop"></div>
+    <div class="contact-modal-dialog" role="alertdialog" aria-modal="true" aria-labelledby="imissive-modal-title">
+      <h2 id="imissive-modal-title">شكرا لك</h2>
+      <p>تم إرسال طلبك بنجاح. سيتواصل معك فريق iMissive قريبا.</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById("imissive-form");
+      var status = document.getElementById("imissive-status");
+      var modal = document.getElementById("imissive-modal");
+      var submitButton = form.querySelector("button[type='submit']");
+      var phoneInput = document.getElementById("imissive-phone");
+      var redirectUrl = "/ar/what-we-deliver.html";
+
+      phoneInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "").slice(0, 15);
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.hidden = true;
+        submitButton.disabled = true;
+        submitButton.textContent = "جار الارسال...";
+
+        var formData = new FormData(form);
+        fetch("https://formsubmit.co/ajax/info@imissive.com", {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: formData
+        })
+          .then(function (response) {
+            if (!response.ok) throw new Error("Request failed");
+            return response.json();
+          })
+          .then(function () {
+            modal.hidden = false;
+            setTimeout(function () {
+              window.location.href = redirectUrl;
+            }, 2200);
+          })
+          .catch(function () {
+            status.textContent = "تعذر ارسال الطلب حاليا. يرجى المحاولة مرة اخرى بعد قليل.";
+            status.hidden = false;
+          })
+          .finally(function () {
+            submitButton.disabled = false;
+            submitButton.textContent = "إرسال";
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -2230,6 +2230,13 @@ html[dir="rtl"] .footer-col ul {
   margin:0 auto;
   background:#ccefef !important}
 
+.contact-template-page--imissive {
+  background:#eceaed !important}
+
+.contact-template-wrap--imissive,
+.contact-template-form--imissive {
+  background:#eceaed !important}
+
 .contact-template-form {
   display:flex;
   flex-direction:column;
@@ -2261,6 +2268,11 @@ html[dir="rtl"] .footer-col ul {
   align-self:flex-start;
   margin-top:24px;
   margin-inline-start:0}
+
+.contact-template-logo--imissive {
+  width:170px;
+  mix-blend-mode:normal;
+  margin-top:18px}
 
 html[dir="rtl"] .contact-template-logo {
   align-self:flex-end;
@@ -2385,6 +2397,9 @@ html[dir="rtl"] .contact-template-logo {
   .contact-template-logo {
     width:128px;
     margin-top:14px}
+
+  .contact-template-logo--imissive {
+    width:146px}
 
   .contact-template-action-cell {
     justify-content:flex-start}
