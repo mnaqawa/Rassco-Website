@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="تواصل مع مجموعة راسكو"/>
+<title>تواصل معنا - مجموعة راسكو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/css/rassco.css"/>
+</head>
+<body class="contact-template-page">
+  <a class="skip-link" href="#contact-form">تخطي إلى النموذج</a>
+  <h1 class="contact-template-title">تواصل معنا</h1>
+  <p class="contact-template-note">يرجى تعبئة البيانات ثم الضغط على إرسال. ستصل رسالتك إلى info@rassco.com.</p>
+  <div id="contact-success" class="contact-template-success" hidden>شكرا لك. تم إرسال رسالتك بنجاح.</div>
+
+  <div class="contact-template-wrap">
+    <form id="contact-form" class="contact-template-form" method="POST" action="https://formsubmit.co/info@rassco.com">
+      <input type="hidden" name="_subject" value="Arabic Website Contact Form Submission"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="_next" value="https://www.rassco.com/ar/contact.html?submitted=1"/>
+
+      <div class="contact-template-labels" aria-hidden="true">
+        <div>الاسم</div>
+        <div>* رقم الهاتف</div>
+        <div>* البريد الإلكتروني</div>
+        <div>اسم الشركة</div>
+        <div>* الموضوع</div>
+        <div>* السؤال / الخدمة المطلوبة</div>
+        <img class="contact-template-logo" src="../assets/images/rassco-logo.png" alt="مجموعة راسكو"/>
+      </div>
+
+      <div class="contact-template-fields">
+        <input class="contact-template-input" type="text" name="name" aria-label="الاسم"/>
+        <input class="contact-template-input" type="tel" name="phone" required aria-label="رقم الهاتف"/>
+        <input class="contact-template-input" type="email" name="email" required aria-label="البريد الإلكتروني"/>
+        <input class="contact-template-input" type="text" name="company" aria-label="اسم الشركة"/>
+        <input class="contact-template-input" type="text" name="subject" required aria-label="الموضوع"/>
+        <textarea class="contact-template-textarea" name="message" required aria-label="السؤال أو الخدمة المطلوبة"></textarea>
+        <button class="contact-template-submit" type="submit">إرسال</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var success = document.getElementById("contact-success");
+      if (params.get("submitted") === "1") {
+        success.hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>
