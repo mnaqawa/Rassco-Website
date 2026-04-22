@@ -2221,14 +2221,14 @@ html[dir="rtl"] .footer-col ul {
 
 /* —— Contact page —— */
 .contact-template-page {
-  background:#ccefef !important;
+  background:#e5f7f7 !important;
   min-height:100vh;
   padding:clamp(20px, 4vw, 40px)}
 
 .contact-template-wrap {
   max-width:980px;
   margin:0 auto;
-  background:#ccefef !important}
+  background:#e5f7f7 !important}
 
 .contact-template-form {
   display:grid;
@@ -2236,7 +2236,7 @@ html[dir="rtl"] .footer-col ul {
   gap:24px;
   align-items:start;
   padding:24px;
-  background:#ccefef !important}
+  background:#e5f7f7 !important}
 
 .contact-template-labels {
   display:flex;
