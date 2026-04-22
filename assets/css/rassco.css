@@ -2221,21 +2221,22 @@ html[dir="rtl"] .footer-col ul {
 
 /* —— Contact page —— */
 .contact-template-page {
-  background:#ccefef;
+  background:#ccefef !important;
   min-height:100vh;
   padding:clamp(20px, 4vw, 40px)}
 
 .contact-template-wrap {
   max-width:980px;
   margin:0 auto;
-  background:#ccefef}
+  background:#ccefef !important}
 
 .contact-template-form {
   display:grid;
   grid-template-columns:240px 1fr;
   gap:24px;
   align-items:start;
-  padding:24px}
+  padding:24px;
+  background:#ccefef !important}
 
 .contact-template-labels {
   display:flex;
@@ -2247,8 +2248,11 @@ html[dir="rtl"] .footer-col ul {
   line-height:1.1}
 
 .contact-template-logo {
-  width:150px;
-  margin-top:8px}
+  width:130px;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+  margin-top:10px}
 
 .contact-template-fields {
   display:flex;
@@ -2324,4 +2328,7 @@ html[dir="rtl"] .footer-col ul {
   .contact-template-labels {
     font-size:18px;
     gap:12px}
+
+  .contact-template-logo {
+    width:118px}
 }
