@@ -2312,6 +2312,10 @@ html[dir="rtl"] .contact-template-logo {
 .contact-template-submit:hover {
   background:#0e8e8c}
 
+.contact-template-submit:disabled {
+  opacity:.75;
+  cursor:not-allowed}
+
 .contact-template-title {
   max-width:980px;
   margin:0 auto 8px;
@@ -2328,12 +2332,44 @@ html[dir="rtl"] .contact-template-logo {
 .contact-template-success {
   max-width:980px;
   margin:0 auto 16px;
-  background:#e6fff4;
-  border:1px solid #9adfbf;
-  color:#1d5c3f;
+  background:#fff4f4;
+  border:1px solid #f0b7b7;
+  color:#7a2d2d;
   border-radius:8px;
   padding:10px 12px;
   font-size:14px}
+
+.contact-modal {
+  position:fixed;
+  inset:0;
+  z-index:500}
+
+.contact-modal-backdrop {
+  position:absolute;
+  inset:0;
+  background:rgba(15,32,40,.35)}
+
+.contact-modal-dialog {
+  position:relative;
+  z-index:1;
+  max-width:520px;
+  margin:22vh auto 0;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 20px 52px rgba(0,0,0,.2);
+  padding:28px 24px;
+  text-align:center}
+
+.contact-modal-dialog h2 {
+  font-size:30px;
+  color:#1f2a37;
+  margin:0 0 10px}
+
+.contact-modal-dialog p {
+  font-size:16px;
+  color:#42515f;
+  line-height:1.65;
+  margin:0}
 
 @media (max-width:800px) {
   .contact-template-form {
@@ -2352,4 +2388,11 @@ html[dir="rtl"] .contact-template-logo {
 
   .contact-template-action-cell {
     justify-content:flex-start}
+
+  .contact-modal-dialog {
+    margin:18vh 16px 0;
+    padding:22px 18px}
+
+  .contact-modal-dialog h2 {
+    font-size:24px}
 }
