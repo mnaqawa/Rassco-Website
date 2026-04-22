@@ -2248,11 +2248,18 @@ html[dir="rtl"] .footer-col ul {
   line-height:1.1}
 
 .contact-template-logo {
-  width:130px;
+  width:114px;
   max-width:100%;
   height:auto;
   object-fit:contain;
-  margin-top:10px}
+  align-self:flex-start;
+  margin-top:14px;
+  margin-inline-start:2px}
+
+html[dir="rtl"] .contact-template-logo {
+  align-self:flex-end;
+  margin-inline-start:0;
+  margin-inline-end:2px}
 
 .contact-template-fields {
   display:flex;
@@ -2330,5 +2337,6 @@ html[dir="rtl"] .footer-col ul {
     gap:12px}
 
   .contact-template-logo {
-    width:118px}
+    width:102px;
+    margin-top:10px}
 }
