@@ -2233,6 +2233,10 @@ html[dir="rtl"] .footer-col ul {
 .contact-template-page--imissive {
   background:#eceaed !important}
 
+html.imissive-theme,
+html.imissive-theme body {
+  background:#eceaed !important}
+
 .contact-template-wrap--imissive,
 .contact-template-form--imissive {
   background:#eceaed !important}
