@@ -1956,9 +1956,9 @@ a.sector-service-card:hover {
 
 .sector-service-logo {
   display:block;
-  width:auto;
+  width:170px;
   max-width:100%;
-  max-height:30px;
+  height:auto;
   object-fit:contain;
   object-position:left center}
 
@@ -2374,75 +2374,14 @@ html.rasalulla-theme body {
   line-height:1.12}
 
 .contact-template-logo {
-  width:148px;
+  width:170px;
   max-width:100%;
   height:auto;
   object-fit:contain;
-  mix-blend-mode:multiply;
+  mix-blend-mode:normal;
   align-self:flex-start;
-  margin-top:24px;
+  margin-top:18px;
   margin-inline-start:0}
-
-.contact-template-logo--imissive {
-  width:170px;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--funrides {
-  width:170px;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--spectrums {
-  width:170px;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--tadawi {
-  width:170px;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--cx {
-  width:170px;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--aman {
-  width:200px;
-  max-width:100%;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--score850 {
-  width:200px;
-  max-width:100%;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--gameezy {
-  width:220px;
-  max-width:100%;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--cybersecurity {
-  width:240px;
-  max-width:100%;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--kwickbox {
-  width:240px;
-  max-width:100%;
-  mix-blend-mode:normal;
-  margin-top:18px}
-
-.contact-template-logo--rasalulla {
-  width:220px;
-  max-width:100%;
-  mix-blend-mode:normal;
-  margin-top:18px}
 
 html[dir="rtl"] .contact-template-logo {
   align-self:flex-end;
@@ -2565,41 +2504,11 @@ html[dir="rtl"] .contact-template-logo {
     font-size:28px}
 
   .contact-template-logo {
-    width:128px;
+    width:146px;
     margin-top:14px}
 
-  .contact-template-logo--imissive {
+  .sector-service-logo {
     width:146px}
-
-  .contact-template-logo--funrides {
-    width:146px}
-
-  .contact-template-logo--spectrums {
-    width:146px}
-
-  .contact-template-logo--tadawi {
-    width:146px}
-
-  .contact-template-logo--cx {
-    width:146px}
-
-  .contact-template-logo--aman {
-    width:168px}
-
-  .contact-template-logo--score850 {
-    width:168px}
-
-  .contact-template-logo--gameezy {
-    width:180px}
-
-  .contact-template-logo--cybersecurity {
-    width:200px}
-
-  .contact-template-logo--kwickbox {
-    width:200px}
-
-  .contact-template-logo--rasalulla {
-    width:190px}
 
   .contact-template-action-cell {
     justify-content:flex-start}
