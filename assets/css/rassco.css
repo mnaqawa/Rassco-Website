@@ -1956,8 +1956,9 @@ a.sector-service-card:hover {
 
 .sector-service-logo {
   display:block;
-  width:170px;
-  max-width:100%;
+  width:auto;
+  max-width:170px;
+  max-height:48px;
   height:auto;
   object-fit:contain;
   object-position:left center}
@@ -2367,6 +2368,9 @@ html.rasalulla-theme body {
 .contact-template-row--message {
   align-items:start}
 
+.contact-template-row--logo {
+  align-items:end}
+
 .contact-template-label {
   color:#1f2a37;
   font-weight:600;
@@ -2374,17 +2378,21 @@ html.rasalulla-theme body {
   line-height:1.12}
 
 .contact-template-logo {
-  width:170px;
-  max-width:100%;
+  display:block;
+  width:auto;
+  max-width:170px;
+  max-height:48px;
   height:auto;
   object-fit:contain;
+  object-position:left center;
   mix-blend-mode:normal;
-  align-self:flex-start;
-  margin-top:18px;
+  align-self:flex-end;
+  margin-top:0;
   margin-inline-start:0}
 
 html[dir="rtl"] .contact-template-logo {
   align-self:flex-end;
+  object-position:right center;
   margin-inline-start:0;
   margin-inline-end:0}
 
@@ -2504,11 +2512,13 @@ html[dir="rtl"] .contact-template-logo {
     font-size:28px}
 
   .contact-template-logo {
-    width:146px;
-    margin-top:14px}
+    max-width:146px;
+    max-height:42px;
+    margin-top:0}
 
   .sector-service-logo {
-    width:146px}
+    max-width:146px;
+    max-height:42px}
 
   .contact-template-action-cell {
     justify-content:flex-start}
