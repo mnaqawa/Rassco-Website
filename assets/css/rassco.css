@@ -2396,6 +2396,11 @@ html[dir="rtl"] .contact-template-logo {
   margin-inline-start:0;
   margin-inline-end:0}
 
+.contact-template-logo--spectrums,
+.contact-template-logo--cybersecurity {
+  max-width:220px;
+  max-height:72px}
+
 .contact-template-logo-cell {
   display:flex;
   align-items:flex-end}
@@ -2515,6 +2520,11 @@ html[dir="rtl"] .contact-template-logo {
     max-width:146px;
     max-height:42px;
     margin-top:0}
+
+  .contact-template-logo--spectrums,
+  .contact-template-logo--cybersecurity {
+    max-width:190px;
+    max-height:60px}
 
   .sector-service-logo {
     max-width:146px;
