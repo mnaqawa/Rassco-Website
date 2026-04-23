@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="funrides-theme">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="طلب عرض خدمة التنقل الذكي من Fun Ride"/>
+<title>طلب الخدمة - Fun Ride</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/css/rassco.css"/>
+</head>
+<body class="contact-template-page contact-template-page--funrides">
+  <a class="skip-link" href="#funrides-form">تخطي إلى النموذج</a>
+  <h1 class="contact-template-title">طلب الخدمة</h1>
+  <p class="contact-template-note">يرجى تعبئة البيانات ثم الضغط على إرسال. ستصل رسالتك إلى info@funridescooters.com.</p>
+  <div id="funrides-status" class="contact-template-success" hidden></div>
+
+  <div class="contact-template-wrap contact-template-wrap--funrides">
+    <form id="funrides-form" class="contact-template-form contact-template-form--funrides" method="POST" action="https://formsubmit.co/info@funridescooters.com">
+      <input type="hidden" name="_subject" value="Arabic Fun Ride Smart Mobility Service Brief Request"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_captcha" value="false"/>
+
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="funrides-name">الاسم</label>
+        <input id="funrides-name" class="contact-template-input" type="text" name="name" autocomplete="name"/>
+      </div>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="funrides-phone">رقم الهاتف*</label>
+        <input id="funrides-phone" class="contact-template-input" type="tel" name="phone" required inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" autocomplete="tel" title="يرجى إدخال أرقام فقط (من 7 إلى 15 رقم)."/>
+      </div>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="funrides-email">البريد الإلكتروني*</label>
+        <input id="funrides-email" class="contact-template-input" type="email" name="email" required autocomplete="email" title="يرجى إدخال بريد إلكتروني صحيح."/>
+      </div>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="funrides-company">اسم الشركة</label>
+        <input id="funrides-company" class="contact-template-input" type="text" name="company" autocomplete="organization"/>
+      </div>
+      <div class="contact-template-row">
+        <label class="contact-template-label" for="funrides-subject">الموضوع*</label>
+        <input id="funrides-subject" class="contact-template-input" type="text" name="subject" required value="طلب خدمة التنقل الذكي"/>
+      </div>
+      <div class="contact-template-row contact-template-row--message">
+        <label class="contact-template-label" for="funrides-message">السؤال / الخدمة المطلوبة*</label>
+        <textarea id="funrides-message" class="contact-template-textarea" name="message" required></textarea>
+      </div>
+      <div class="contact-template-row contact-template-row--logo">
+        <div class="contact-template-logo-cell">
+          <img class="contact-template-logo contact-template-logo--funrides" src="../assets/images/logo-fun-rides.png" alt="Fun Ride"/>
+        </div>
+        <div class="contact-template-action-cell">
+          <button class="contact-template-submit" type="submit">إرسال</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="funrides-modal" class="contact-modal" hidden>
+    <div class="contact-modal-backdrop"></div>
+    <div class="contact-modal-dialog" role="alertdialog" aria-modal="true" aria-labelledby="funrides-modal-title">
+      <h2 id="funrides-modal-title">شكرا لكم</h2>
+      <p>تم استلام طلبكم بنجاح، وسيقوم فريق Fun Ride بالتواصل معكم في أقرب وقت.</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById("funrides-form");
+      var status = document.getElementById("funrides-status");
+      var modal = document.getElementById("funrides-modal");
+      var submitButton = form.querySelector("button[type='submit']");
+      var phoneInput = document.getElementById("funrides-phone");
+      var redirectUrl = "/ar/what-we-deliver.html";
+
+      phoneInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "").slice(0, 15);
+      });
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.hidden = true;
+        submitButton.disabled = true;
+        submitButton.textContent = "جاري الإرسال...";
+
+        var formData = new FormData(form);
+        fetch("https://formsubmit.co/ajax/info@funridescooters.com", {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: formData
+        })
+          .then(function (response) {
+            if (!response.ok) throw new Error("Request failed");
+            return response.json();
+          })
+          .then(function () {
+            modal.hidden = false;
+            setTimeout(function () {
+              window.location.href = redirectUrl;
+            }, 2200);
+          })
+          .catch(function () {
+            status.textContent = "تعذر إرسال الطلب حاليا. يرجى المحاولة مرة أخرى بعد قليل.";
+            status.hidden = false;
+          })
+          .finally(function () {
+            submitButton.disabled = false;
+            submitButton.textContent = "إرسال";
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

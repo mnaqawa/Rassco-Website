@@ -66,8 +66,8 @@
   <div id="imissive-modal" class="contact-modal" hidden>
     <div class="contact-modal-backdrop"></div>
     <div class="contact-modal-dialog" role="alertdialog" aria-modal="true" aria-labelledby="imissive-modal-title">
-      <h2 id="imissive-modal-title">شكرا لك</h2>
-      <p>تم إرسال طلبك بنجاح. سيتواصل معك فريق iMissive قريبا.</p>
+      <h2 id="imissive-modal-title">شكرا لكم</h2>
+      <p>تم استلام طلبكم بنجاح، وسيقوم فريق iMissive بالتواصل معكم في أقرب وقت.</p>
     </div>
   </div>
 
@@ -88,7 +88,7 @@
         event.preventDefault();
         status.hidden = true;
         submitButton.disabled = true;
-        submitButton.textContent = "جار الارسال...";
+        submitButton.textContent = "جاري الإرسال...";
 
         var formData = new FormData(form);
         fetch("https://formsubmit.co/ajax/info@imissive.com", {
@@ -107,7 +107,7 @@
             }, 2200);
           })
           .catch(function () {
-            status.textContent = "تعذر ارسال الطلب حاليا. يرجى المحاولة مرة اخرى بعد قليل.";
+            status.textContent = "تعذر إرسال الطلب حاليا. يرجى المحاولة مرة أخرى بعد قليل.";
             status.hidden = false;
           })
           .finally(function () {

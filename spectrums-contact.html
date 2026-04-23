@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrums-theme">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Request Medical Distribution service brief from Spectrums Tech"/>
+<title>Request Service Brief - Spectrums Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/css/rassco.css"/>
+</head>
+<body class="contact-template-page contact-template-page--spectrums">
+  <a class="skip-link" href="#spectrums-form">Skip to form</a>
+  <h1 class="contact-template-title">Request Service Brief</h1>
+  <p class="contact-template-note">Fill in your details and submit. Your message will be sent to info@spectrumstech.com.</p>
+  <div id="spectrums-status" class="contact-template-success" hidden></div>
+
+  <div class="contact-template-wrap contact-template-wrap--spectrums">
+    <form id="spectrums-form" class="contact-template-form contact-template-form--spectrums" method="POST" action="https://formsubmit.co/info@spectrumstech.com">
+      <input type="hidden" name="_subject" value="Spectrums Tech Medical Distribution Service Brief Request"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="hidden" name="_captcha" value="false"/>
+
+      <div class="contact-template-row"><label class="contact-template-label" for="spectrums-name">Your Name</label><input id="spectrums-name" class="contact-template-input" type="text" name="name" autocomplete="name"/></div>
+      <div class="contact-template-row"><label class="contact-template-label" for="spectrums-phone">Phone Number*</label><input id="spectrums-phone" class="contact-template-input" type="tel" name="phone" required inputmode="numeric" pattern="[0-9]{7,15}" maxlength="15" autocomplete="tel" title="Please enter numbers only (7 to 15 digits)."/></div>
+      <div class="contact-template-row"><label class="contact-template-label" for="spectrums-email">Your Email*</label><input id="spectrums-email" class="contact-template-input" type="email" name="email" required autocomplete="email" title="Please enter a valid email address."/></div>
+      <div class="contact-template-row"><label class="contact-template-label" for="spectrums-company">Your Company</label><input id="spectrums-company" class="contact-template-input" type="text" name="company" autocomplete="organization"/></div>
+      <div class="contact-template-row"><label class="contact-template-label" for="spectrums-subject">Subject*</label><input id="spectrums-subject" class="contact-template-input" type="text" name="subject" required value="Medical Distribution Service Brief"/></div>
+      <div class="contact-template-row contact-template-row--message"><label class="contact-template-label" for="spectrums-message">Question / Required Service*</label><textarea id="spectrums-message" class="contact-template-textarea" name="message" required></textarea></div>
+      <div class="contact-template-row contact-template-row--logo">
+        <div class="contact-template-logo-cell"><img class="contact-template-logo contact-template-logo--spectrums" src="assets/images/logo-spectrums-tech.png" alt="Spectrums Tech"/></div>
+        <div class="contact-template-action-cell"><button class="contact-template-submit" type="submit">Submit</button></div>
+      </div>
+    </form>
+  </div>
+
+  <div id="spectrums-modal" class="contact-modal" hidden>
+    <div class="contact-modal-backdrop"></div>
+    <div class="contact-modal-dialog" role="alertdialog" aria-modal="true" aria-labelledby="spectrums-modal-title">
+      <h2 id="spectrums-modal-title">Thank you.</h2>
+      <p>Your request has been received successfully. The Spectrums Tech team will contact you shortly.</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById("spectrums-form");
+      var status = document.getElementById("spectrums-status");
+      var modal = document.getElementById("spectrums-modal");
+      var submitButton = form.querySelector("button[type='submit']");
+      var phoneInput = document.getElementById("spectrums-phone");
+
+      phoneInput.addEventListener("input", function () { this.value = this.value.replace(/\D/g, "").slice(0, 15); });
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.hidden = true;
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+        fetch("https://formsubmit.co/ajax/info@spectrumstech.com", { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form) })
+          .then(function (response) { if (!response.ok) throw new Error("Request failed"); return response.json(); })
+          .then(function () { modal.hidden = false; setTimeout(function () { window.location.href = "/what-we-deliver.html"; }, 2200); })
+          .catch(function () { status.textContent = "We could not submit your request right now. Please try again shortly."; status.hidden = false; })
+          .finally(function () { submitButton.disabled = false; submitButton.textContent = "Submit"; });
+      });
+    })();
+  </script>
+</body>
+</html>

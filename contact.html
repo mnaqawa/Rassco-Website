@@ -66,8 +66,8 @@
   <div id="contact-modal" class="contact-modal" hidden>
     <div class="contact-modal-backdrop"></div>
     <div class="contact-modal-dialog" role="alertdialog" aria-modal="true" aria-labelledby="contact-modal-title">
-      <h2 id="contact-modal-title">Thank You!</h2>
-      <p>Your request has been submitted successfully. We will contact you soon.</p>
+      <h2 id="contact-modal-title">Thank you.</h2>
+      <p>Your request has been received successfully. Our team will contact you shortly.</p>
     </div>
   </div>
 
@@ -107,7 +107,7 @@
             }, 2200);
           })
           .catch(function () {
-            status.textContent = "Unable to submit right now. Please try again in a moment.";
+            status.textContent = "We could not submit your request right now. Please try again shortly.";
             status.hidden = false;
           })
           .finally(function () {

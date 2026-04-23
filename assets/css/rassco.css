@@ -2237,6 +2237,76 @@ html.imissive-theme,
 html.imissive-theme body {
   background:#eceaed !important}
 
+.contact-template-page--funrides {
+  background:#eef7e2 !important}
+
+.contact-template-page--spectrums {
+  background:#ddebf5 !important}
+
+.contact-template-page--tadawi {
+  background:#efe9f3 !important}
+
+.contact-template-page--cx {
+  background:#dadbdc !important}
+
+.contact-template-page--aman {
+  background:#f3f3f4 !important}
+
+.contact-template-page--score850 {
+  background:#ebe9ef !important}
+
+.contact-template-page--gameezy {
+  background:#e5e5ea !important}
+
+.contact-template-page--cybersecurity {
+  background:#e5e5e5 !important}
+
+.contact-template-page--kwickbox {
+  background:#f4f4f4 !important}
+
+.contact-template-page--rasalulla {
+  background:#ccefef !important}
+
+html.funrides-theme,
+html.funrides-theme body {
+  background:#eef7e2 !important}
+
+html.spectrums-theme,
+html.spectrums-theme body {
+  background:#ddebf5 !important}
+
+html.tadawi-theme,
+html.tadawi-theme body {
+  background:#efe9f3 !important}
+
+html.cx-theme,
+html.cx-theme body {
+  background:#dadbdc !important}
+
+html.aman-theme,
+html.aman-theme body {
+  background:#f3f3f4 !important}
+
+html.score850-theme,
+html.score850-theme body {
+  background:#ebe9ef !important}
+
+html.gameezy-theme,
+html.gameezy-theme body {
+  background:#e5e5ea !important}
+
+html.cybersecurity-theme,
+html.cybersecurity-theme body {
+  background:#e5e5e5 !important}
+
+html.kwickbox-theme,
+html.kwickbox-theme body {
+  background:#f4f4f4 !important}
+
+html.rasalulla-theme,
+html.rasalulla-theme body {
+  background:#ccefef !important}
+
 .contact-template-form {
   display:flex;
   flex-direction:column;
@@ -2247,6 +2317,46 @@ html.imissive-theme body {
 .contact-template-wrap.contact-template-wrap--imissive,
 .contact-template-form.contact-template-form--imissive {
   background:#eceaed !important}
+
+.contact-template-wrap.contact-template-wrap--funrides,
+.contact-template-form.contact-template-form--funrides {
+  background:#eef7e2 !important}
+
+.contact-template-wrap.contact-template-wrap--spectrums,
+.contact-template-form.contact-template-form--spectrums {
+  background:#ddebf5 !important}
+
+.contact-template-wrap.contact-template-wrap--tadawi,
+.contact-template-form.contact-template-form--tadawi {
+  background:#efe9f3 !important}
+
+.contact-template-wrap.contact-template-wrap--cx,
+.contact-template-form.contact-template-form--cx {
+  background:#dadbdc !important}
+
+.contact-template-wrap.contact-template-wrap--aman,
+.contact-template-form.contact-template-form--aman {
+  background:#f3f3f4 !important}
+
+.contact-template-wrap.contact-template-wrap--score850,
+.contact-template-form.contact-template-form--score850 {
+  background:#ebe9ef !important}
+
+.contact-template-wrap.contact-template-wrap--gameezy,
+.contact-template-form.contact-template-form--gameezy {
+  background:#e5e5ea !important}
+
+.contact-template-wrap.contact-template-wrap--cybersecurity,
+.contact-template-form.contact-template-form--cybersecurity {
+  background:#e5e5e5 !important}
+
+.contact-template-wrap.contact-template-wrap--kwickbox,
+.contact-template-form.contact-template-form--kwickbox {
+  background:#f4f4f4 !important}
+
+.contact-template-wrap.contact-template-wrap--rasalulla,
+.contact-template-form.contact-template-form--rasalulla {
+  background:#ccefef !important}
 
 .contact-template-row {
   display:grid;
@@ -2275,6 +2385,62 @@ html.imissive-theme body {
 
 .contact-template-logo--imissive {
   width:170px;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--funrides {
+  width:170px;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--spectrums {
+  width:170px;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--tadawi {
+  width:170px;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--cx {
+  width:170px;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--aman {
+  width:200px;
+  max-width:100%;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--score850 {
+  width:200px;
+  max-width:100%;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--gameezy {
+  width:220px;
+  max-width:100%;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--cybersecurity {
+  width:240px;
+  max-width:100%;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--kwickbox {
+  width:240px;
+  max-width:100%;
+  mix-blend-mode:normal;
+  margin-top:18px}
+
+.contact-template-logo--rasalulla {
+  width:220px;
+  max-width:100%;
   mix-blend-mode:normal;
   margin-top:18px}
 
@@ -2404,6 +2570,36 @@ html[dir="rtl"] .contact-template-logo {
 
   .contact-template-logo--imissive {
     width:146px}
+
+  .contact-template-logo--funrides {
+    width:146px}
+
+  .contact-template-logo--spectrums {
+    width:146px}
+
+  .contact-template-logo--tadawi {
+    width:146px}
+
+  .contact-template-logo--cx {
+    width:146px}
+
+  .contact-template-logo--aman {
+    width:168px}
+
+  .contact-template-logo--score850 {
+    width:168px}
+
+  .contact-template-logo--gameezy {
+    width:180px}
+
+  .contact-template-logo--cybersecurity {
+    width:200px}
+
+  .contact-template-logo--kwickbox {
+    width:200px}
+
+  .contact-template-logo--rasalulla {
+    width:190px}
 
   .contact-template-action-cell {
     justify-content:flex-start}
